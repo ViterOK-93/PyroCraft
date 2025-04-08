@@ -112,9 +112,6 @@
     <EmbeddedResource Include="I2GResources.uk.resx">
       <DependentUpon>I2GResources.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="I2GResources.be.resx">
-      <DependentUpon>I2GResources.cs</DependentUpon>
-    </None>
     <Compile Include="PyroCraft.cs" />
     <Compile Include="PyroCraft.Designer.cs">
       <DependentUpon>PyroCraft.cs</DependentUpon>
