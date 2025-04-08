@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
-partial class image2gcode {
+partial class PyroCraft {
     private GraphView graphView1;
     
     private Font gvFont = new Font(FontFamily.GenericSansSerif, 11F, FontStyle.Regular, GraphicsUnit.Pixel);

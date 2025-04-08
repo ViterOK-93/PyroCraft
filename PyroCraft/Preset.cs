@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 using Microsoft.Win32;
 
-partial class image2gcode {
+partial class PyroCraft {
     private RegistryKey[] preset = new RegistryKey[PresetCount];
     
     private enum MachineType {

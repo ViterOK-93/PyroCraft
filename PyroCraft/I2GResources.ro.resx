@@ -484,7 +484,7 @@
     <value>Putere Marcare:</value>
   </data>
   <data name="Grbl_UnknownParameter" xml:space="preserve">
-    <value>Răspunsul de la controler conține unul sau mai mulți parametri necunoscuți. Încercați să schimbați setările controlerului folosind cea mai recentă versiune a image2gcode.</value>
+    <value>Răspunsul de la controler conține unul sau mai mulți parametri necunoscuți. Încercați să schimbați setările controlerului folosind cea mai recentă versiune a PyroCraft.</value>
   </data>
   <data name="Grbl_GCodeError" xml:space="preserve">
     <value>Ceva n-a mers bine. Controlerul a răspuns cu codul de eroare {0}.</value>

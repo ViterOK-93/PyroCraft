@@ -10,7 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-partial class image2gcode {
+partial class PyroCraft {
     private const int MaxImageSize = 16383;
     private const int MinImageSize = 8;
     

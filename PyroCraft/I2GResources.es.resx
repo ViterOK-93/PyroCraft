@@ -118,163 +118,163 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="PF_Initializing" xml:space="preserve">
-    <value>Inicializálás...</value>
+    <value>Inicializando...</value>
   </data>
   <data name="PF_GeneratingGCode" xml:space="preserve">
-    <value>G-kód gelerálás...</value>
+    <value>Generando código G...</value>
   </data>
   <data name="PF_Abort" xml:space="preserve">
-    <value>MEGSZAKÍT</value>
+    <value>ABORTAR</value>
   </data>
   <data name="PF_SendingFile" xml:space="preserve">
-    <value>NC-file küldés...</value>
+    <value>Enviando archivo NC...</value>
   </data>
   <data name="PF_SendingData" xml:space="preserve">
-    <value>Adat küldés...</value>
+    <value>Enviando datos...</value>
   </data>
   <data name="Grbl_InvalidResponse" xml:space="preserve">
-    <value>Érvénytelen válasz a vezérlőtől!</value>
+    <value>Respuesta no válida del controlador!</value>
   </data>
   <data name="Grbl_NotResponding" xml:space="preserve">
-    <value>A vezérlő nem válaszol!</value>
+    <value>El controlador no responde!</value>
   </data>
   <data name="Error_InvalidPresetFile" xml:space="preserve">
-    <value>'{0}' egy érvénytelen előbeállítás fájl!</value>
+    <value>'{0}' es un archivo predeterminado no válido!</value>
   </data>
   <data name="Menu_File" xml:space="preserve">
-    <value>Fájl</value>
+    <value>Archivo</value>
   </data>
   <data name="Menu_Open" xml:space="preserve">
-    <value>Megnyit...</value>
+    <value>Abrir...</value>
   </data>
   <data name="Menu_Reload" xml:space="preserve">
-    <value>Újratölt</value>
+    <value>Recargar</value>
   </data>
   <data name="Menu_SaveGCode" xml:space="preserve">
-    <value>G-kód mentése...</value>
+    <value>Salvar código G...</value>
   </data>
   <data name="Menu_Close" xml:space="preserve">
-    <value>Bezár</value>
+    <value>Cerrar</value>
   </data>
   <data name="Menu_Language" xml:space="preserve">
-    <value>Nyelv</value>
+    <value>Idioma</value>
   </data>
   <data name="Menu_Exit" xml:space="preserve">
-    <value>Kilép</value>
+    <value>Salir</value>
   </data>
   <data name="Menu_Image" xml:space="preserve">
-    <value>Kép</value>
+    <value>Imagen</value>
   </data>
   <data name="Menu_OpenClipboard" xml:space="preserve">
-    <value>Megnyitás vágólapról</value>
+    <value>Abrir desde el portapapeles</value>
   </data>
   <data name="Menu_SaveImage" xml:space="preserve">
-    <value>Másolat mentése mint...</value>
+    <value>Guardar una copia como...</value>
   </data>
   <data name="Menu_CropBorder" xml:space="preserve">
-    <value>Határvágás</value>
+    <value>Cortar borde</value>
   </data>
   <data name="Menu_Preset" xml:space="preserve">
-    <value>Előbeállítás</value>
+    <value>Preestablecido</value>
   </data>
   <data name="Menu_PresetLoad" xml:space="preserve">
-    <value>Előbeállítás betöltése innen</value>
+    <value>Cargar preajuste desde</value>
   </data>
   <data name="Menu_PresetSave" xml:space="preserve">
-    <value>Előbeállítás mentése ide</value>
+    <value>Guardar preajuste en</value>
   </data>
   <data name="Menu_PresetFile" xml:space="preserve">
-    <value>Fájl...</value>
+    <value>Archivo...</value>
   </data>
   <data name="Menu_MachineType" xml:space="preserve">
-    <value>Gép típus ({0})</value>
+    <value>Tipo de máquina ({0})</value>
   </data>
   <data name="Menu_Machine" xml:space="preserve">
-    <value>Gép</value>
+    <value>Máquina</value>
   </data>
   <data name="Menu_SerialPort" xml:space="preserve">
-    <value>Soros Port ({0})</value>
+    <value>Puerto serie ({0})</value>
   </data>
   <data name="Menu_Send" xml:space="preserve">
-    <value>Küld...</value>
+    <value>Enviar...</value>
   </data>
   <data name="Menu_SendFile" xml:space="preserve">
-    <value>NC-fájl küldés...</value>
+    <value>Enviar archivo-NC...</value>
   </data>
   <data name="Menu_Configuration" xml:space="preserve">
-    <value>Konfiguráció...</value>
+    <value>Configuración...</value>
   </data>
   <data name="Menu_Help" xml:space="preserve">
-    <value>Segítség</value>
+    <value>Ayuda</value>
   </data>
   <data name="Menu_About" xml:space="preserve">
-    <value>Infó...</value>
+    <value>Acerca...</value>
   </data>
   <data name="Btn_Open" xml:space="preserve">
-    <value>Nyit...</value>
+    <value>Abrir...</value>
   </data>
   <data name="Btn_SaveGCode" xml:space="preserve">
-    <value>G-kód mentés...</value>
+    <value>Salvar Código G...</value>
   </data>
   <data name="Btn_Send" xml:space="preserve">
-    <value>Küld...</value>
+    <value>Enviar...</value>
   </data>
   <data name="Status_Ready" xml:space="preserve">
-    <value>Kész</value>
+    <value>Listo</value>
   </data>
   <data name="Status_Zoom" xml:space="preserve">
-    <value>Nagyítás: {0}%</value>
+    <value>Zoom: {0}%</value>
   </data>
   <data name="Status_ImageSize" xml:space="preserve">
-    <value>Kép méret: {0} x {1}</value>
+    <value>Tamaño de imagen: {0} x {1}</value>
   </data>
   <data name="Status_BurningArea" xml:space="preserve">
-    <value>Egetés felület: {0:0.#} cm^2</value>
+    <value>Área de quemado: {0:0.#} cm^2</value>
   </data>
   <data name="Status_YStepover" xml:space="preserve">
-    <value>Y lépésköz: {0:0.0##} mm</value>
+    <value>Paso Y: {0:0.0##} mm</value>
   </data>
   <data name="Status_ApproxRunTimeUnknown" xml:space="preserve">
-    <value>Futási idő: ismeretlen</value>
+    <value>Tiempo de ejecución aproximado: desconocido</value>
   </data>
   <data name="Status_ApproxRunTimeSeconds" xml:space="preserve">
-    <value>Futási idő: ~{0}s</value>
+    <value>Tiempo de ejecución aproximado: ~{0}s</value>
   </data>
   <data name="Status_ApproxRunTimeMinutes" xml:space="preserve">
-    <value>Futási idő: ~{0}m</value>
+    <value>Tiempo de ejecución aproximado: ~{0}m</value>
   </data>
   <data name="Status_ApproxRunTimeHours" xml:space="preserve">
-    <value>Futási idő: ~{0}h</value>
+    <value>Tiempo de ejecución aproximado: ~{0}h</value>
   </data>
   <data name="Status_ApproxRunTime" xml:space="preserve">
-    <value>Futási idő: ~{0}h {1}m</value>
+    <value>Tiempo de ejecución aproximado: ~{0}h {1}m</value>
   </data>
   <data name="Im_1BitPalette" xml:space="preserve">
-    <value>Egy bites paletta</value>
+    <value>Usar paleta de 1-bit</value>
   </data>
   <data name="Im_Dithering" xml:space="preserve">
-    <value>Zajmoduláció:</value>
+    <value>Tramado:</value>
   </data>
   <data name="Im_BlackThreshold" xml:space="preserve">
-    <value>Fekete küszöb:</value>
+    <value>Umbral negro:</value>
   </data>
   <data name="Im_InvertColors" xml:space="preserve">
-    <value>Színfordítás</value>
+    <value>Invertir colores</value>
   </data>
   <data name="Im_SharpenForce" xml:space="preserve">
-    <value>Élesítés erősség:</value>
+    <value>Forzar Afilado:</value>
   </data>
   <data name="Im_Brightness" xml:space="preserve">
-    <value>Fényerő:</value>
+    <value>Brillo:</value>
   </data>
   <data name="Im_Contrast" xml:space="preserve">
-    <value>Kontraszt:</value>
+    <value>Contraste:</value>
   </data>
   <data name="Im_Gamma" xml:space="preserve">
-    <value>Gamma:</value>
+    <value>Gama:</value>
   </data>
   <data name="Im_Resolution" xml:space="preserve">
-    <value>Kép felbontás (DPI):</value>
+    <value>Resolucion de imagen (DPI):</value>
   </data>
   <data name="Im_DpiX" xml:space="preserve">
     <value>X:</value>
@@ -283,7 +283,7 @@
     <value>Y:</value>
   </data>
   <data name="Im_SameAsX" xml:space="preserve">
-    <value>Ugyanaz mint X</value>
+    <value>Igual que X</value>
   </data>
   <data name="Im_Left" xml:space="preserve">
     <value>X:</value>
@@ -292,207 +292,207 @@
     <value>Y:</value>
   </data>
   <data name="Im_Width" xml:space="preserve">
-    <value>Szélesség:</value>
+    <value>Ancho:</value>
   </data>
   <data name="Im_Height" xml:space="preserve">
-    <value>Magasság:</value>
+    <value>Altura:</value>
   </data>
   <data name="Im_Interpolation" xml:space="preserve">
-    <value>Interpoláció:</value>
+    <value>Interpolación:</value>
   </data>
   <data name="Gc_Speed" xml:space="preserve">
-    <value>Sebesség:</value>
+    <value>Velocidad:</value>
   </data>
   <data name="Gc_Power" xml:space="preserve">
-    <value>Erősség:</value>
+    <value>Poder:</value>
   </data>
   <data name="Menu_Accel" xml:space="preserve">
-    <value>Gyorsulás ({0:0.#})</value>
+    <value>Aceleración ({0:0.#})</value>
   </data>
   <data name="Menu_G0Spd" xml:space="preserve">
-    <value>Gyors sebesség ({0:0.#})</value>
+    <value>Velocidad rápida ({0:0.#})</value>
   </data>
   <data name="Gc_HeatDelay" xml:space="preserve">
-    <value>Melegítés késleltetés:</value>
+    <value>Retraso de calor:</value>
   </data>
   <data name="Gc_AirAssist" xml:space="preserve">
-    <value>Levegő segítség</value>
+    <value>Asistencia de aire</value>
   </data>
   <data name="Gc_ChangeSpeedOnWhite" xml:space="preserve">
-    <value>Sebesség váltás fehéren</value>
+    <value>Cambiar velocidad en blanco</value>
   </data>
   <data name="Gc_WhiteSpeed" xml:space="preserve">
-    <value>Fehér sebesség:</value>
+    <value>Velocidad en blanco:</value>
   </data>
   <data name="Gc_WhiteDistance" xml:space="preserve">
-    <value>Min Távolság:</value>
+    <value>Distancia mínima:</value>
   </data>
   <data name="Gc_Bidirectional" xml:space="preserve">
-    <value>Kétirányú</value>
+    <value>Bidireccional</value>
   </data>
   <data name="Gc_CleaningStrategy" xml:space="preserve">
-    <value>Tisztító Stratégia:</value>
+    <value>Estrategia de limpieza:</value>
   </data>
   <data name="Gc_StripWidth" xml:space="preserve">
-    <value>Szélesség:</value>
+    <value>Ancho:</value>
   </data>
   <data name="Gc_StripSpeed" xml:space="preserve">
-    <value>Sebesség a sávon:</value>
+    <value>Velocidad en la tira:</value>
   </data>
   <data name="Gc_CleaningField" xml:space="preserve">
-    <value>Tisztító Terület:</value>
+    <value>Campo de limpieza:</value>
   </data>
   <data name="Gc_CleaningSpd" xml:space="preserve">
-    <value>Tisztító Sebesség:</value>
+    <value>Velocidad de limpieza:</value>
   </data>
   <data name="Gc_CleaningCycles" xml:space="preserve">
-    <value>Ciklusok:</value>
+    <value>Ciclos:</value>
   </data>
   <data name="Menu_DoNotReturnY" xml:space="preserve">
-    <value>Y ne térjen vissza kezdőpontra</value>
+    <value>No retornar Y al origen</value>
   </data>
   <data name="Gc_EditGraph" xml:space="preserve">
-    <value>ÁBRA MÓDOSÍTÁS</value>
+    <value>EDITAR GRÁFICO</value>
   </data>
   <data name="Gc_CleaningRowsCount" xml:space="preserve">
-    <value>Sorok száma:</value>
+    <value>Recuento de filas:</value>
   </data>
   <data name="Menu_DownloadCH340Driver" xml:space="preserve">
-    <value>SOROS-port illesztő letöltés</value>
+    <value>Descargar controlador de puerto COM</value>
   </data>
   <data name="About_Title" xml:space="preserve">
-    <value>Infó</value>
+    <value>Acerca</value>
   </data>
   <data name="About_MakeASmallDonation" xml:space="preserve">
-    <value>Ha hasznosnak találta ezt a szoftvert, adományozzon.</value>
+    <value>Si encuentra útil este software, haga una pequeña donación.</value>
   </data>
   <data name="Status_LoadingImage" xml:space="preserve">
-    <value>Kép betöltése...</value>
+    <value>Cargando imagen...</value>
   </data>
   <data name="Status_AppIsLoading" xml:space="preserve">
-    <value>Az alkalmazás betöltődik...</value>
+    <value>La aplicación se está cargando...</value>
   </data>
   <data name="Status_AppIsClosing" xml:space="preserve">
-    <value>Az alkalmazás bezár...</value>
+    <value>La aplicación se está cerrando...</value>
   </data>
   <data name="Status_ApplyingFilters" xml:space="preserve">
-    <value>Szűrők alkalmazása...</value>
+    <value>Aplicando filtros...</value>
   </data>
   <data name="Status_ApplyingDithering" xml:space="preserve">
-    <value>Zajmoduláció alkalmazása...</value>
+    <value>Aplicando tramado...</value>
   </data>
   <data name="Status_CalculatingWorkTime" xml:space="preserve">
-    <value>Munkaidő kiszámítása...</value>
+    <value>Calculando el tiempo de trabajo...</value>
   </data>
   <data name="Status_ResizingImage" xml:space="preserve">
-    <value>Kép átméretezés...</value>
+    <value>Cambiando el tamaño de la imagen...</value>
   </data>
   <data name="Gc_MmPerRevolution" xml:space="preserve">
-    <value>MM forradalomonként:</value>
+    <value>MM por revolución:</value>
   </data>
   <data name="Gc_CylinderDiameter" xml:space="preserve">
-    <value>Henger átmérője:</value>
+    <value>Diámetro del cilindro:</value>
   </data>
   <data name="Menu_SpeedGraphReset" xml:space="preserve">
-    <value>Sebesség grafikon visszaállítás</value>
+    <value>Restablecer el gráfico de velocidad a</value>
   </data>
   <data name="Menu_PowerGraphReset" xml:space="preserve">
-    <value>Sebesség grafikon visszaállítás</value>
+    <value>Restablecer el gráfico de poder a</value>
   </data>
   <data name="Menu_GraphLinear" xml:space="preserve">
-    <value>Lineáris</value>
+    <value>Lineal</value>
   </data>
   <data name="Menu_GraphDefault" xml:space="preserve">
-    <value>Alapértelmezett</value>
+    <value>Defecto</value>
   </data>
   <data name="Error_CouldNotFindFile" xml:space="preserve">
-    <value>Nem található '{0}'!</value>
+    <value>No se pudo encontrar '{0}'!</value>
   </data>
   <data name="Error_InvalidImageFile" xml:space="preserve">
-    <value>'{0}' érvénytelen képformátum!</value>
+    <value>'{0}' no tiene un formato de imagen válido!</value>
   </data>
   <data name="GrblSet_Title" xml:space="preserve">
-    <value>Vezérlő Beállítás</value>
+    <value>Configuración del controlador</value>
   </data>
   <data name="GrblSet_XAxis" xml:space="preserve">
-    <value>X Tengely</value>
+    <value>Eje X</value>
   </data>
   <data name="GrblSet_YAxis" xml:space="preserve">
-    <value>Y Tengely</value>
+    <value>Eje Y</value>
   </data>
   <data name="GrblSet_StepsPerMM" xml:space="preserve">
-    <value>Lépések/MM:</value>
+    <value>Pasos por MM:</value>
   </data>
   <data name="GrblSet_MaxVelocity" xml:space="preserve">
-    <value>Max Sebesség:</value>
+    <value>Velocidad máxima:</value>
   </data>
   <data name="GrblSet_MaxAccel" xml:space="preserve">
-    <value>Gyorsulás:</value>
+    <value>Aceleración:</value>
   </data>
   <data name="GrblSet_MaxTravel" xml:space="preserve">
-    <value>Asztal Méret:</value>
+    <value>Tamaño de la mesa:</value>
   </data>
   <data name="GrblSet_FastJog" xml:space="preserve">
-    <value>Gyors Lökés:</value>
+    <value>Movimiento rápido:</value>
   </data>
   <data name="GrblSet_SlowJog" xml:space="preserve">
-    <value>Lassú Lökés:</value>
+    <value>Movimiento lento:</value>
   </data>
   <data name="GrblSet_InvertStepPin" xml:space="preserve">
-    <value>STEP Pin Invertálás</value>
+    <value>Invertir Pin STEP</value>
   </data>
   <data name="GrblSet_InvertDirectionPin" xml:space="preserve">
-    <value>DIR Pin Invertálás</value>
+    <value>Invertir Pin DIR</value>
   </data>
   <data name="GrblSet_HomingDirInvert" xml:space="preserve">
-    <value>Hazafutás Irány Invertálás</value>
+    <value>Invertir dirección de inicio</value>
   </data>
   <data name="GrblSet_CoreXY" xml:space="preserve">
-    <value>CoreXY/H-bot Kinematika</value>
+    <value>CoreXY/H-bot Kinematics</value>
   </data>
   <data name="GrblSet_FastGrid" xml:space="preserve">
-    <value>Gyors rácsköz:</value>
+    <value>Cuadrícula rápida:</value>
   </data>
   <data name="GrblSet_SlowGrid" xml:space="preserve">
-    <value>Lassú rácsköz:</value>
+    <value>Cuadrícula lenta:</value>
   </data>
   <data name="Btn_OK" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="Btn_Cancel" xml:space="preserve">
-    <value>Mégse</value>
+    <value>Cancelar</value>
   </data>
   <data name="Btn_Apply" xml:space="preserve">
-    <value>Alkalmaz</value>
+    <value>Aplicar</value>
   </data>
   <data name="PF_RetrievingGrblSettings" xml:space="preserve">
-    <value>Vezérlő beállítások lekérése...</value>
+    <value>Recuperando la configuración del controlador...</value>
   </data>
   <data name="TranslationAuthor" xml:space="preserve">
-    <value>Levente Foldes</value>
+    <value>Oslay Viera</value>
   </data>
   <data name="GrblSet_HomingCycle2" xml:space="preserve">
-    <value>Hazafutás 2:</value>
+    <value>Ciclo de inicio 2:</value>
   </data>
   <data name="GrblSet_InvertHomePin" xml:space="preserve">
-    <value>HOME Pin Invertálás</value>
+    <value>Invertir Pin HOME</value>
   </data>
   <data name="GrblSet_HomingCycle1" xml:space="preserve">
-    <value>Hazafutás 1:</value>
+    <value>Ciclo de inicio 1:</value>
   </data>
   <data name="GrblSet_MarkerPower" xml:space="preserve">
-    <value>Jelölő Erősség:</value>
+    <value>Poder del marcador:</value>
   </data>
   <data name="Grbl_UnknownParameter" xml:space="preserve">
-    <value>A vezérlőtől kapott válasz egy vagy több ismeretlen paramétert tartalmaz. Próbálja meg módosítani a vezérlő beállításait az image2gcode legújabb verziójával.</value>
+    <value>La respuesta del controlador contiene uno o más parámetros desconocidos. Intente cambiar la configuración del controlador con la última versión de PyroCraft.</value>
   </data>
   <data name="Grbl_GCodeError" xml:space="preserve">
-    <value>Valami elromlott. A vezérlő a következő hibakóddal válaszolt {0}.</value>
+    <value>Algo salió mal. El controlador respondió con el código de error {0}.</value>
   </data>
   <data name="Grbl_GCodeErrorFile" xml:space="preserve">
-    <value>G-kód hiba a következőben '{0}' a {1} sor közelében. A vezérlő a következő hibakóddal válaszolt {2}.</value>
+    <value>Error de código G en '{0}' cerca de la línea {1}. El controlador respondió con el código de error {2}.</value>
   </data>
   <data name="Gc_NumberOfPasses" xml:space="preserve">
-    <value>Menetek száma:</value>
+    <value>Número de pases:</value>
   </data>
 </root>

@@ -5,7 +5,7 @@ using System.IO;
 using System.Text;
 using System.Windows.Forms;
 
-partial class image2gcode {
+partial class PyroCraft {
     private const float MaxGcSpeed = 30000F;
     private const float MaxGcPower = 1000F;
     private const float MaxGcDwell = 60F;

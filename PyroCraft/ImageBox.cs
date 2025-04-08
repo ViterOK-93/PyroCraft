@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-partial class image2gcode {
+partial class PyroCraft {
     private int ibImageWidth = -1;
     private int ibImageHeight = -1;
     

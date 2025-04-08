@@ -2,7 +2,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-partial class image2gcode {
+partial class PyroCraft {
     private delegate bool GrblAbort();
     
     private GrblSettingsForm grblSettings1;
