@@ -1,8 +1,5 @@
 using System;
-using System.IO;
 using System.Linq;
-using System.Windows.Forms;
-
 using Microsoft.Win32;
 
 partial class PyroCraft {
@@ -14,12 +11,10 @@ partial class PyroCraft {
         ImpactGraver,
     }
     
-    private const int PresetFileSize = ((12 + 4*26 + 3) / 2 * 2);
-    
     private string presetName = "";
     private MachineType machineType = MachineType.LaserEngraver;
     
-    private unsafe void LoadPreset(int idx) {
+    private void LoadPreset(int idx) {
         if (idx == -2) {
             goto SKIP_PRESET_LOAD;
         }
@@ -130,7 +125,7 @@ partial class PyroCraft {
         bWorkerFlags = (BWorkerFlags.CalcJobTime|BWorkerFlags.RedrawOrigin);
     }
     
-    private unsafe void SavePreset(int idx) {
+    private void SavePreset(int idx) {
         Action<string, float> WriteFloat;
         Action<string, object> WriteBoolean;
         Action<string, object> WriteByte;

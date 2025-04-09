@@ -5,9 +5,9 @@ using Microsoft.Win32;
 static class MyExtensions {
     public static void SuspendLayout2(this Control ctrl) {
         foreach (Control ctrl2 in ctrl.Controls) {
-            if (ctrl2 is TableLayoutPanel || ctrl2 is Panel) {
+            if (ctrl2 is Panel) {
                 ctrl2.SuspendLayout2();
-            } else if (ctrl2 is MenuStrip || ctrl2 is ToolStrip || ctrl2 is StatusStrip) {
+            } else if (ctrl2 is ToolStrip) {
                 ctrl2.SuspendLayout();
             }
         }
@@ -16,9 +16,9 @@ static class MyExtensions {
     
     public static void ResumeLayout2(this Control ctrl) {
         foreach (Control ctrl2 in ctrl.Controls) {
-            if (ctrl2 is TableLayoutPanel || ctrl2 is Panel) {
+            if (ctrl2 is Panel) {
                 ctrl2.ResumeLayout2();
-            } else if (ctrl2 is MenuStrip || ctrl2 is ToolStrip || ctrl2 is StatusStrip) {
+            } else if (ctrl2 is ToolStrip) {
                 ctrl2.ResumeLayout(false);
                 ctrl2.PerformLayout();
             }

@@ -1,6 +1,4 @@
 using System;
-using System.Drawing;
-using System.Windows.Forms;
 
 partial class PyroCraft {
     private delegate bool GrblAbort();
