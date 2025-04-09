@@ -177,15 +177,6 @@
   <data name="Menu_Preset" xml:space="preserve">
     <value>Presetate</value>
   </data>
-  <data name="Menu_PresetLoad" xml:space="preserve">
-    <value>Încărcați presetarea din</value>
-  </data>
-  <data name="Menu_PresetSave" xml:space="preserve">
-    <value>Salvați presetarea în</value>
-  </data>
-  <data name="Menu_PresetFile" xml:space="preserve">
-    <value>Fișier...</value>
-  </data>
   <data name="Menu_MachineType" xml:space="preserve">
     <value>Tipul mașinii ({0})</value>
   </data>

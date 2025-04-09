@@ -177,15 +177,6 @@
   <data name="Menu_Preset" xml:space="preserve">
     <value>Előbeállítás</value>
   </data>
-  <data name="Menu_PresetLoad" xml:space="preserve">
-    <value>Előbeállítás betöltése innen</value>
-  </data>
-  <data name="Menu_PresetSave" xml:space="preserve">
-    <value>Előbeállítás mentése ide</value>
-  </data>
-  <data name="Menu_PresetFile" xml:space="preserve">
-    <value>Fájl...</value>
-  </data>
   <data name="Menu_MachineType" xml:space="preserve">
     <value>Gép típus ({0})</value>
   </data>

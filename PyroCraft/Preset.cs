@@ -19,26 +19,16 @@ partial class PyroCraft {
     private string presetName = "";
     private MachineType machineType = MachineType.LaserEngraver;
     
-    private unsafe void LoadPreset(int idx, byte[] buf = null) {
+    private unsafe void LoadPreset(int idx) {
         if (idx == -2) {
             goto SKIP_PRESET_LOAD;
         }
         
-        int i = 0;
-        
         Func<string, float, float> ReadFloat;
         Func<string, int, int> ReadByte;
         
-        if (idx != -1) {
-            ReadFloat = preset[idx].GetSingle;
-            ReadByte = preset[idx].GetInt32;
-        } else {
-            ReadByte = (name, defaultValue) => buf[i++];
-            ReadFloat = (name, defaultValue) => {
-                int int_value = ((buf[i++] << 0)|(buf[i++] << 8)|(buf[i++] << 16)|(buf[i++] << 24));
-                return *(float*)&int_value;
-            };
-        }
+        ReadFloat = preset[idx].GetSingle;
+        ReadByte = preset[idx].GetInt32;
         
         machineType = (MachineType)ReadByte("MachineType", (int)MachineType.LaserEngraver);
         gcG0Speed = ReadFloat("G0Speed", 12000F);
@@ -99,11 +89,7 @@ partial class PyroCraft {
         textBox7.Text = ReadFloat("MmPerRevolution", 360F).ToString();
         textBox8.Text = ReadFloat("CylinderDiameter", 50F).ToString();
         
-        if (idx != -1) {
-            textBox22.Text = preset[idx].GetString("PresetName", ("Preset" + (1+idx).ToString(invariantCulture)));
-        } else {
-            textBox22.Text = Path.GetFileNameWithoutExtension(openFileDialog3.FileName);
-        }
+        textBox22.Text = preset[idx].GetString("PresetName", ("Preset" + (1+idx).ToString(invariantCulture)));
         
         SKIP_PRESET_LOAD:
         bool isNichromeBurner = (machineType == MachineType.NichromeBurner);
@@ -144,28 +130,14 @@ partial class PyroCraft {
         bWorkerFlags = (BWorkerFlags.CalcJobTime|BWorkerFlags.RedrawOrigin);
     }
     
-    private unsafe void SavePreset(int idx, byte[] buf = null) {
-        int i = 0;
-        
+    private unsafe void SavePreset(int idx) {
         Action<string, float> WriteFloat;
         Action<string, object> WriteBoolean;
         Action<string, object> WriteByte;
         
-        if (idx != -1) {
-            WriteFloat = preset[idx].SetSingle;
-            WriteBoolean = preset[idx].SetInt32;
-            WriteByte = preset[idx].SetInt32;
-        } else {
-            WriteBoolean = (name, flag) => buf[i++] = (byte)((bool)flag ? 1 : 0);
-            WriteByte = (name, value) => buf[i++] = (byte)((int)value);
-            WriteFloat = (name, value) => {
-                int int_value = *(int*)&value;
-                buf[i++] = (byte)(int_value >> 0);
-                buf[i++] = (byte)(int_value >> 8);
-                buf[i++] = (byte)(int_value >> 16);
-                buf[i++] = (byte)(int_value >> 24);
-            };
-        }
+        WriteFloat = preset[idx].SetSingle;
+        WriteBoolean = preset[idx].SetInt32;
+        WriteByte = preset[idx].SetInt32;
         
         WriteByte("MachineType", machineType);
         WriteFloat("G0Speed", gcG0Speed);
@@ -214,67 +186,7 @@ partial class PyroCraft {
         WriteFloat("MmPerRevolution", mmPerRevolution);
         WriteFloat("CylinderDiameter", cylinderDiameter);
         
-        if (idx != -1) {
-            preset[idx].SetString("PresetName", presetName);
-            preset[idx].Flush();
-        }
-    }
-    
-    private void FileToolStripMenuItem1Click(object sender, EventArgs e) {
-        openFileDialog3.FileName = null;
-        if (openFileDialog3.ShowDialog(this) != DialogResult.OK) {
-            return;
-        }
-        
-        byte[] buf = new byte[PresetFileSize+1];
-        try {
-            string fileName = openFileDialog3.FileName;
-            using (FileStream inFile = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.Read)) {
-                if (inFile.Read(buf, 0, (PresetFileSize+1)) != PresetFileSize) {
-                    throw new Exception(String.Format(culture, resources.GetString("Error_InvalidPresetFile", culture), Path.GetFileName(fileName)));
-                }
-                
-                UInt16 chksum = 0;
-                for (int i = 0; i < PresetFileSize; i += 2) {
-                    chksum += (UInt16)((buf[1+i] << 8) | buf[i]);
-                }
-                
-                if (chksum != 0) {
-                    throw new Exception(String.Format(culture, resources.GetString("Error_InvalidPresetFile", culture), Path.GetFileName(fileName)));
-                }
-            }
-        } catch (Exception ex) {
-            MessageBox.Show(this, ex.Message, AppTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            return;
-        }
-        
-        LoadPreset(-1, buf);
-    }
-    
-    private void FileToolStripMenuItem2Click(object sender, EventArgs e) {
-        saveFileDialog3.FileName = (presetName + ".dat");
-        if (saveFileDialog3.ShowDialog(this) != DialogResult.OK) {
-            return;
-        }
-        
-        byte[] buf = new byte[PresetFileSize];
-        SavePreset(-1, buf);
-        
-        UInt16 chksum = 0;
-        for (int i = (PresetFileSize-2); i > 0; i -= 2) {
-            chksum -= (UInt16)((buf[i-1] << 8) | buf[i-2]);
-        }
-        
-        buf[PresetFileSize-2] = (byte)(chksum >> 0);
-        buf[PresetFileSize-1] = (byte)(chksum >> 8);
-        
-        try {
-            using (FileStream outFile = new FileStream(saveFileDialog3.FileName, FileMode.Create, FileAccess.Write, FileShare.None)) {
-                outFile.Write(buf, 0, PresetFileSize);
-            }
-        } catch (Exception ex) {
-            MessageBox.Show(this, ex.Message, AppTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            return;
-        }
+        preset[idx].SetString("PresetName", presetName);
+        preset[idx].Flush();
     }
 }

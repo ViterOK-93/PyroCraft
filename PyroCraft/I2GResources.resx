@@ -177,15 +177,6 @@
   <data name="Menu_Preset" xml:space="preserve">
     <value>P&amp;reset</value>
   </data>
-  <data name="Menu_PresetLoad" xml:space="preserve">
-    <value>&amp;Load Preset from</value>
-  </data>
-  <data name="Menu_PresetSave" xml:space="preserve">
-    <value>&amp;Save Preset to</value>
-  </data>
-  <data name="Menu_PresetFile" xml:space="preserve">
-    <value>&amp;File...</value>
-  </data>
   <data name="Menu_MachineType" xml:space="preserve">
     <value>&amp;Machine Type ({0})</value>
   </data>
