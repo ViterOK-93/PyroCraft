@@ -402,51 +402,6 @@
   <data name="Error_InvalidImageFile" xml:space="preserve">
     <value>'{0}' érvénytelen képformátum!</value>
   </data>
-  <data name="GrblSet_Title" xml:space="preserve">
-    <value>Vezérlő Beállítás</value>
-  </data>
-  <data name="GrblSet_XAxis" xml:space="preserve">
-    <value>X Tengely</value>
-  </data>
-  <data name="GrblSet_YAxis" xml:space="preserve">
-    <value>Y Tengely</value>
-  </data>
-  <data name="GrblSet_StepsPerMM" xml:space="preserve">
-    <value>Lépések/MM:</value>
-  </data>
-  <data name="GrblSet_MaxVelocity" xml:space="preserve">
-    <value>Max Sebesség:</value>
-  </data>
-  <data name="GrblSet_MaxAccel" xml:space="preserve">
-    <value>Gyorsulás:</value>
-  </data>
-  <data name="GrblSet_MaxTravel" xml:space="preserve">
-    <value>Asztal Méret:</value>
-  </data>
-  <data name="GrblSet_FastJog" xml:space="preserve">
-    <value>Gyors Lökés:</value>
-  </data>
-  <data name="GrblSet_SlowJog" xml:space="preserve">
-    <value>Lassú Lökés:</value>
-  </data>
-  <data name="GrblSet_InvertStepPin" xml:space="preserve">
-    <value>STEP Pin Invertálás</value>
-  </data>
-  <data name="GrblSet_InvertDirectionPin" xml:space="preserve">
-    <value>DIR Pin Invertálás</value>
-  </data>
-  <data name="GrblSet_HomingDirInvert" xml:space="preserve">
-    <value>Hazafutás Irány Invertálás</value>
-  </data>
-  <data name="GrblSet_CoreXY" xml:space="preserve">
-    <value>CoreXY/H-bot Kinematika</value>
-  </data>
-  <data name="GrblSet_FastGrid" xml:space="preserve">
-    <value>Gyors rácsköz:</value>
-  </data>
-  <data name="GrblSet_SlowGrid" xml:space="preserve">
-    <value>Lassú rácsköz:</value>
-  </data>
   <data name="Btn_OK" xml:space="preserve">
     <value>OK</value>
   </data>
@@ -461,21 +416,6 @@
   </data>
   <data name="TranslationAuthor" xml:space="preserve">
     <value>Levente Foldes</value>
-  </data>
-  <data name="GrblSet_HomingCycle2" xml:space="preserve">
-    <value>Hazafutás 2:</value>
-  </data>
-  <data name="GrblSet_InvertHomePin" xml:space="preserve">
-    <value>HOME Pin Invertálás</value>
-  </data>
-  <data name="GrblSet_HomingCycle1" xml:space="preserve">
-    <value>Hazafutás 1:</value>
-  </data>
-  <data name="GrblSet_MarkerPower" xml:space="preserve">
-    <value>Jelölő Erősség:</value>
-  </data>
-  <data name="Grbl_UnknownParameter" xml:space="preserve">
-    <value>A vezérlőtől kapott válasz egy vagy több ismeretlen paramétert tartalmaz. Próbálja meg módosítani a vezérlő beállításait az PyroCraft legújabb verziójával.</value>
   </data>
   <data name="Grbl_GCodeError" xml:space="preserve">
     <value>Valami elromlott. A vezérlő a következő hibakóddal válaszolt {0}.</value>
