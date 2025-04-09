@@ -233,12 +233,6 @@ partial class PyroCraft {
         this.button20 = new System.Windows.Forms.Button();
         this.button21 = new System.Windows.Forms.Button();
         this.button22 = new System.Windows.Forms.Button();
-        this.button23 = new System.Windows.Forms.Button();
-        this.button24 = new System.Windows.Forms.Button();
-        this.button25 = new System.Windows.Forms.Button();
-        this.button26 = new System.Windows.Forms.Button();
-        this.button27 = new System.Windows.Forms.Button();
-        this.button28 = new System.Windows.Forms.Button();
         this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
         this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
         this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
@@ -2452,15 +2446,16 @@ partial class PyroCraft {
         // tableLayoutPanel31
         // 
         this.tableLayoutPanel31.AutoSize = true;
-        this.tableLayoutPanel31.ColumnCount = 8;
+        this.tableLayoutPanel31.ColumnCount = 9;
         this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-        this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-        this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-        this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-        this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-        this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-        this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-        this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+        this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+        this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+        this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+        this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+        this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+        this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+        this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+        this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 26F));
         this.tableLayoutPanel31.Controls.Add(this.button15, 1, 0);
         this.tableLayoutPanel31.Controls.Add(this.button16, 2, 0);
         this.tableLayoutPanel31.Controls.Add(this.button17, 3, 0);
@@ -2468,17 +2463,10 @@ partial class PyroCraft {
         this.tableLayoutPanel31.Controls.Add(this.button19, 5, 0);
         this.tableLayoutPanel31.Controls.Add(this.button20, 6, 0);
         this.tableLayoutPanel31.Controls.Add(this.button21, 7, 0);
-        this.tableLayoutPanel31.Controls.Add(this.button22, 1, 1);
-        this.tableLayoutPanel31.Controls.Add(this.button23, 2, 1);
-        this.tableLayoutPanel31.Controls.Add(this.button24, 3, 1);
-        this.tableLayoutPanel31.Controls.Add(this.button25, 4, 1);
-        this.tableLayoutPanel31.Controls.Add(this.button26, 5, 1);
-        this.tableLayoutPanel31.Controls.Add(this.button27, 6, 1);
-        this.tableLayoutPanel31.Controls.Add(this.button28, 7, 1);
+        this.tableLayoutPanel31.Controls.Add(this.button22, 8, 0);
         this.tableLayoutPanel31.Dock = System.Windows.Forms.DockStyle.Fill;
         this.tableLayoutPanel31.Margin = new System.Windows.Forms.Padding(0);
-        this.tableLayoutPanel31.RowCount = 2;
-        this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+        this.tableLayoutPanel31.RowCount = 1;
         this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
         this.tableLayoutPanel31.TabIndex = 12;
         // 
@@ -2490,7 +2478,7 @@ partial class PyroCraft {
         this.button15.FlatAppearance.BorderSize = 0;
         this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.button15.ForeColor = System.Drawing.Color.White;
-        this.button15.Margin = new System.Windows.Forms.Padding(1, 3, 2, 2);
+        this.button15.Margin = new System.Windows.Forms.Padding(1, 3, 2, 3);
         this.button15.TabIndex = 0;
         this.button15.TabStop = false;
         this.button15.UseCompatibleTextRendering = true;
@@ -2505,7 +2493,7 @@ partial class PyroCraft {
         this.button16.FlatAppearance.BorderSize = 0;
         this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.button16.ForeColor = System.Drawing.Color.White;
-        this.button16.Margin = new System.Windows.Forms.Padding(1, 3, 2, 2);
+        this.button16.Margin = new System.Windows.Forms.Padding(1, 3, 2, 3);
         this.button16.TabIndex = 1;
         this.button16.TabStop = false;
         this.button16.UseCompatibleTextRendering = true;
@@ -2520,7 +2508,7 @@ partial class PyroCraft {
         this.button17.FlatAppearance.BorderSize = 0;
         this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.button17.ForeColor = System.Drawing.Color.White;
-        this.button17.Margin = new System.Windows.Forms.Padding(1, 3, 2, 2);
+        this.button17.Margin = new System.Windows.Forms.Padding(1, 3, 2, 3);
         this.button17.TabIndex = 2;
         this.button17.TabStop = false;
         this.button17.UseCompatibleTextRendering = true;
@@ -2535,7 +2523,7 @@ partial class PyroCraft {
         this.button18.FlatAppearance.BorderSize = 0;
         this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.button18.ForeColor = System.Drawing.Color.Black;
-        this.button18.Margin = new System.Windows.Forms.Padding(1, 3, 2, 2);
+        this.button18.Margin = new System.Windows.Forms.Padding(1, 3, 2, 3);
         this.button18.TabIndex = 3;
         this.button18.TabStop = false;
         this.button18.UseCompatibleTextRendering = true;
@@ -2550,7 +2538,7 @@ partial class PyroCraft {
         this.button19.FlatAppearance.BorderSize = 0;
         this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.button19.ForeColor = System.Drawing.Color.Black;
-        this.button19.Margin = new System.Windows.Forms.Padding(1, 3, 2, 2);
+        this.button19.Margin = new System.Windows.Forms.Padding(1, 3, 2, 3);
         this.button19.TabIndex = 4;
         this.button19.TabStop = false;
         this.button19.UseCompatibleTextRendering = true;
@@ -2565,7 +2553,7 @@ partial class PyroCraft {
         this.button20.FlatAppearance.BorderSize = 0;
         this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.button20.ForeColor = System.Drawing.Color.Black;
-        this.button20.Margin = new System.Windows.Forms.Padding(1, 3, 2, 2);
+        this.button20.Margin = new System.Windows.Forms.Padding(1, 3, 2, 3);
         this.button20.TabIndex = 5;
         this.button20.TabStop = false;
         this.button20.UseCompatibleTextRendering = true;
@@ -2580,7 +2568,7 @@ partial class PyroCraft {
         this.button21.FlatAppearance.BorderSize = 0;
         this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.button21.ForeColor = System.Drawing.Color.Black;
-        this.button21.Margin = new System.Windows.Forms.Padding(1, 3, 3, 2);
+        this.button21.Margin = new System.Windows.Forms.Padding(1, 3, 2, 3);
         this.button21.TabIndex = 6;
         this.button21.TabStop = false;
         this.button21.UseCompatibleTextRendering = true;
@@ -2595,102 +2583,12 @@ partial class PyroCraft {
         this.button22.FlatAppearance.BorderSize = 0;
         this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.button22.ForeColor = System.Drawing.Color.Black;
-        this.button22.Margin = new System.Windows.Forms.Padding(1, 2, 2, 3);
+        this.button22.Margin = new System.Windows.Forms.Padding(1, 3, 3, 3);
         this.button22.TabIndex = 7;
         this.button22.TabStop = false;
         this.button22.UseCompatibleTextRendering = true;
         this.button22.UseVisualStyleBackColor = false;
         this.button22.Click += new System.EventHandler(this.PresetButtonClick);
-        // 
-        // button23
-        // 
-        this.button23.AutoSize = true;
-        this.button23.BackColor = System.Drawing.Color.Gray;
-        this.button23.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-        this.button23.FlatAppearance.BorderSize = 0;
-        this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        this.button23.ForeColor = System.Drawing.Color.Black;
-        this.button23.Margin = new System.Windows.Forms.Padding(1, 2, 2, 3);
-        this.button23.TabIndex = 8;
-        this.button23.TabStop = false;
-        this.button23.UseCompatibleTextRendering = true;
-        this.button23.UseVisualStyleBackColor = false;
-        this.button23.Click += new System.EventHandler(this.PresetButtonClick);
-        // 
-        // button24
-        // 
-        this.button24.AutoSize = true;
-        this.button24.BackColor = System.Drawing.Color.MediumBlue;
-        this.button24.FlatAppearance.BorderColor = System.Drawing.Color.Magenta;
-        this.button24.FlatAppearance.BorderSize = 0;
-        this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        this.button24.ForeColor = System.Drawing.Color.White;
-        this.button24.Margin = new System.Windows.Forms.Padding(1, 2, 2, 3);
-        this.button24.TabIndex = 9;
-        this.button24.TabStop = false;
-        this.button24.UseCompatibleTextRendering = true;
-        this.button24.UseVisualStyleBackColor = false;
-        this.button24.Click += new System.EventHandler(this.PresetButtonClick);
-        // 
-        // button25
-        // 
-        this.button25.AutoSize = true;
-        this.button25.BackColor = System.Drawing.Color.Brown;
-        this.button25.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-        this.button25.FlatAppearance.BorderSize = 0;
-        this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        this.button25.ForeColor = System.Drawing.Color.White;
-        this.button25.Margin = new System.Windows.Forms.Padding(1, 2, 2, 3);
-        this.button25.TabIndex = 10;
-        this.button25.TabStop = false;
-        this.button25.UseCompatibleTextRendering = true;
-        this.button25.UseVisualStyleBackColor = false;
-        this.button25.Click += new System.EventHandler(this.PresetButtonClick);
-        // 
-        // button26
-        // 
-        this.button26.AutoSize = true;
-        this.button26.BackColor = System.Drawing.Color.Green;
-        this.button26.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-        this.button26.FlatAppearance.BorderSize = 0;
-        this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        this.button26.ForeColor = System.Drawing.Color.White;
-        this.button26.Margin = new System.Windows.Forms.Padding(1, 2, 2, 3);
-        this.button26.TabIndex = 11;
-        this.button26.TabStop = false;
-        this.button26.UseCompatibleTextRendering = true;
-        this.button26.UseVisualStyleBackColor = false;
-        this.button26.Click += new System.EventHandler(this.PresetButtonClick);
-        // 
-        // button27
-        // 
-        this.button27.AutoSize = true;
-        this.button27.BackColor = System.Drawing.Color.Olive;
-        this.button27.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-        this.button27.FlatAppearance.BorderSize = 0;
-        this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        this.button27.ForeColor = System.Drawing.Color.Black;
-        this.button27.Margin = new System.Windows.Forms.Padding(1, 2, 2, 3);
-        this.button27.TabIndex = 12;
-        this.button27.TabStop = false;
-        this.button27.UseCompatibleTextRendering = true;
-        this.button27.UseVisualStyleBackColor = false;
-        this.button27.Click += new System.EventHandler(this.PresetButtonClick);
-        // 
-        // button28
-        // 
-        this.button28.AutoSize = true;
-        this.button28.BackColor = System.Drawing.Color.Chocolate;
-        this.button28.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-        this.button28.FlatAppearance.BorderSize = 0;
-        this.button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        this.button28.ForeColor = System.Drawing.Color.Black;
-        this.button28.Margin = new System.Windows.Forms.Padding(1, 2, 3, 3);
-        this.button28.TabIndex = 13;
-        this.button28.TabStop = false;
-        this.button28.UseCompatibleTextRendering = true;
-        this.button28.UseVisualStyleBackColor = false;
-        this.button28.Click += new System.EventHandler(this.PresetButtonClick);
         // 
         // openFileDialog1
         // 
@@ -2907,12 +2805,6 @@ partial class PyroCraft {
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel32;
     private System.Windows.Forms.OpenFileDialog openFileDialog2;
     private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
-    private System.Windows.Forms.Button button28;
-    private System.Windows.Forms.Button button27;
-    private System.Windows.Forms.Button button26;
-    private System.Windows.Forms.Button button25;
-    private System.Windows.Forms.Button button24;
-    private System.Windows.Forms.Button button23;
     private System.Windows.Forms.Button button22;
     private System.Windows.Forms.Button button21;
     private System.Windows.Forms.Button button20;

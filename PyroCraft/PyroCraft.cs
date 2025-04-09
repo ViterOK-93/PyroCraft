@@ -51,7 +51,7 @@ partial class PyroCraft:Form {
     private const byte ImColorWhite = (254/ImColorStep*ImColorStep);
     private const int ImColorCount = (ImColorWhite/ImColorStep+1);
     
-    private const int PresetCount = 14;
+    private const int PresetCount = 8;
     
     private readonly object imResizeLock = new object();
     
@@ -249,7 +249,7 @@ partial class PyroCraft:Form {
                 //preset[i] = Registry.CurrentUser.CreateSubKey("SOFTWARE\\" + AppTitle + "\\v" + SettingsVersion + "\\Preset" + idx);
                 preset[i] = Registry.CurrentUser.CreateSubKey("SOFTWARE\\image2gcode\\v3.2\\Preset" + idx);
                 
-                tableLayoutPanel31.Controls[i].Text = idx;
+                tableLayoutPanel31.Controls[i].Text = (1+i).ToString(invariantCulture);;
                 tableLayoutPanel31.Controls[i].Tag = i;
                 
                 presetIcons[i] = new Bitmap(16, 16, PixelFormat.Format32bppArgb);
@@ -263,11 +263,11 @@ partial class PyroCraft:Form {
                     }
                 }
                 
-                ToolStripMenuItem toolStripItem3 = new ToolStripMenuItem();
-                toolStripItem3.Tag = i;
-                toolStripItem3.Click += PresetButtonClick;
+                ToolStripMenuItem toolStripItem = new ToolStripMenuItem();
+                toolStripItem.Tag = i;
+                toolStripItem.Click += PresetButtonClick;
                 
-                presetToolStripMenuItem.DropDownItems.Add(toolStripItem3);
+                presetToolStripMenuItem.DropDownItems.Add(toolStripItem);
             }
         }
         
