@@ -177,15 +177,6 @@
   <data name="Menu_Preset" xml:space="preserve">
     <value>Preestablecido</value>
   </data>
-  <data name="Menu_PresetLoad" xml:space="preserve">
-    <value>Cargar preajuste desde</value>
-  </data>
-  <data name="Menu_PresetSave" xml:space="preserve">
-    <value>Guardar preajuste en</value>
-  </data>
-  <data name="Menu_PresetFile" xml:space="preserve">
-    <value>Archivo...</value>
-  </data>
   <data name="Menu_MachineType" xml:space="preserve">
     <value>Tipo de máquina ({0})</value>
   </data>

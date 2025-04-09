@@ -195,9 +195,6 @@
   <data name="Im_SharpenForce" xml:space="preserve">
     <value>Усиление резкости:</value>
   </data>
-  <data name="Menu_PresetFile" xml:space="preserve">
-    <value>Файл...</value>
-  </data>
   <data name="Menu_Configuration" xml:space="preserve">
     <value>Конфигурация...</value>
   </data>
@@ -230,9 +227,6 @@
   </data>
   <data name="Status_ApproxRunTime" xml:space="preserve">
     <value>Время выполнения: ~{0}ч {1}м</value>
-  </data>
-  <data name="Menu_PresetSave" xml:space="preserve">
-    <value>Сохранить пресет в</value>
   </data>
   <data name="Im_Contrast" xml:space="preserve">
     <value>Контраст:</value>
@@ -356,9 +350,6 @@
   </data>
   <data name="Menu_SaveImage" xml:space="preserve">
     <value>Сохранить копию как...</value>
-  </data>
-  <data name="Menu_PresetLoad" xml:space="preserve">
-    <value>Загрузить пресет из</value>
   </data>
   <data name="Menu_DownloadCH340Driver" xml:space="preserve">
     <value>Скачать драйвер COM-порта</value>

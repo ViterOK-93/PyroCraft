@@ -37,12 +37,6 @@ partial class PyroCraft {
         this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
         this.cropToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         this.presetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        this.loadPresetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        this.fileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-        this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
-        this.savePresetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        this.fileToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-        this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
         this.resetSpeedGraphToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         this.defaultToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
         this.x4axisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -252,8 +246,6 @@ partial class PyroCraft {
         this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
         this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
         this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
-        this.openFileDialog3 = new System.Windows.Forms.OpenFileDialog();
-        this.saveFileDialog3 = new System.Windows.Forms.SaveFileDialog();
         this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
         this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
         this.menuStrip1.SuspendLayout();
@@ -461,8 +453,6 @@ partial class PyroCraft {
         // 
         this.presetToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
         this.presetToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-                        this.loadPresetToolStripMenuItem,
-                        this.savePresetToolStripMenuItem,
                         this.resetSpeedGraphToolStripMenuItem,
                         this.resetPowerGraphToolStripMenuItem,
                         this.toolStripSeparator8,
@@ -477,46 +467,6 @@ partial class PyroCraft {
         this.presetToolStripMenuItem.Enabled = false;
         this.presetToolStripMenuItem.Text = "P&reset";
         this.presetToolStripMenuItem.DropDownOpening += new System.EventHandler(this.PresetToolStripMenuItemDropDownOpening);
-        // 
-        // loadPresetToolStripMenuItem
-        // 
-        this.loadPresetToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-        this.loadPresetToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-                        this.fileToolStripMenuItem1,
-                        this.toolStripSeparator9});
-        this.loadPresetToolStripMenuItem.Text = "&Load Preset from";
-        this.loadPresetToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.LoadPresetToolStripMenuItemDropDownItemClicked);
-        // 
-        // fileToolStripMenuItem1
-        // 
-        this.fileToolStripMenuItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-        this.fileToolStripMenuItem1.Tag = -1;
-        this.fileToolStripMenuItem1.Text = "&File...";
-        this.fileToolStripMenuItem1.Click += new System.EventHandler(this.FileToolStripMenuItem1Click);
-        // 
-        // toolStripSeparator9
-        // 
-        this.toolStripSeparator9.Tag = -1;
-        // 
-        // savePresetToolStripMenuItem
-        // 
-        this.savePresetToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-        this.savePresetToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-                        this.fileToolStripMenuItem2,
-                        this.toolStripSeparator10});
-        this.savePresetToolStripMenuItem.Text = "&Save Preset to";
-        this.savePresetToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.SavePresetToolStripMenuItemDropDownItemClicked);
-        // 
-        // fileToolStripMenuItem2
-        // 
-        this.fileToolStripMenuItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-        this.fileToolStripMenuItem2.Tag = -1;
-        this.fileToolStripMenuItem2.Text = "&File...";
-        this.fileToolStripMenuItem2.Click += new System.EventHandler(this.FileToolStripMenuItem2Click);
-        // 
-        // toolStripSeparator10
-        // 
-        this.toolStripSeparator10.Tag = -1;
         // 
         // resetSpeedGraphToolStripMenuItem
         // 
@@ -2779,16 +2729,6 @@ partial class PyroCraft {
         this.openFileDialog2.DefaultExt = "nc";
         this.openFileDialog2.Filter = "All files (*.*)|*.*";
         // 
-        // openFileDialog3
-        // 
-        this.openFileDialog3.DefaultExt = "dat";
-        this.openFileDialog3.Filter = "I2G Presets (*.dat)|*.dat";
-        // 
-        // saveFileDialog3
-        // 
-        this.saveFileDialog3.DefaultExt = "dat";
-        this.saveFileDialog3.Filter = "I2G Presets (*.dat)|*.dat";
-        // 
         // backgroundWorker2
         // 
         this.backgroundWorker2.WorkerReportsProgress = true;
@@ -2965,20 +2905,12 @@ partial class PyroCraft {
     private System.Windows.Forms.Label label44;
     private BufferedPanel panel2;
     private BufferedPanel panel1;
-    private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
-    private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem2;
-    private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
-    private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem1;
     private System.Windows.Forms.ToolStripMenuItem nichromeBurnerToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem laserEngraverToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem machineTypeToolStripMenuItem;
     private System.Windows.Forms.ToolStripSeparator toolStripSeparator13;
     private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
-    private System.Windows.Forms.ToolStripMenuItem savePresetToolStripMenuItem;
-    private System.Windows.Forms.ToolStripMenuItem loadPresetToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem presetToolStripMenuItem;
-    private System.Windows.Forms.SaveFileDialog saveFileDialog3;
-    private System.Windows.Forms.OpenFileDialog openFileDialog3;
     private System.Windows.Forms.Label button30;
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel33;
     private System.Windows.Forms.Label button29;

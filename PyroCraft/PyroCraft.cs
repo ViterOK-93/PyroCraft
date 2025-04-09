@@ -136,8 +136,6 @@ partial class PyroCraft:Form {
         openFileDialog2.Title = AppTitle;
         saveFileDialog1.Title = AppTitle;
         saveFileDialog2.Title = AppTitle;
-        openFileDialog3.Title = AppTitle;
-        saveFileDialog3.Title = AppTitle;
         
         defaultToolStripMenuItem1.Tag = linearGraph;
         defaultToolStripMenuItem2.Tag = linearGraph;
@@ -265,20 +263,10 @@ partial class PyroCraft:Form {
                     }
                 }
                 
-                ToolStripMenuItem toolStripItem1 = new ToolStripMenuItem();
-                toolStripItem1.Image = presetIcons[i];
-                toolStripItem1.Tag = i;
-                
-                ToolStripMenuItem toolStripItem2 = new ToolStripMenuItem();
-                toolStripItem2.Image = presetIcons[i];
-                toolStripItem2.Tag = i;
-                
                 ToolStripMenuItem toolStripItem3 = new ToolStripMenuItem();
                 toolStripItem3.Tag = i;
                 toolStripItem3.Click += PresetButtonClick;
                 
-                loadPresetToolStripMenuItem.DropDownItems.Add(toolStripItem1);
-                savePresetToolStripMenuItem.DropDownItems.Add(toolStripItem2);
                 presetToolStripMenuItem.DropDownItems.Add(toolStripItem3);
             }
         }
@@ -682,11 +670,8 @@ partial class PyroCraft:Form {
     }
     
     private void PresetToolStripMenuItemDropDownOpening(object sender, EventArgs e) {
-        loadPresetToolStripMenuItem.DropDownItems[2+activePreset].Visible = false;
-        savePresetToolStripMenuItem.DropDownItems[2+activePreset].Visible = false;
-        
-        presetToolStripMenuItem.DropDownItems[13+activePreset].Image = presetCheckedIcon;
-        presetToolStripMenuItem.DropDownItems[13+activePreset].Text = presetName;
+        presetToolStripMenuItem.DropDownItems[11+activePreset].Image = presetCheckedIcon;
+        presetToolStripMenuItem.DropDownItems[11+activePreset].Text = presetName;
         
         for (int i = 0; i < PresetCount; i++) {
             if (i == activePreset) {
@@ -695,14 +680,8 @@ partial class PyroCraft:Form {
             
             string text = preset[i].GetString("PresetName", ("Preset" + (1+i).ToString(invariantCulture)));
             
-            loadPresetToolStripMenuItem.DropDownItems[2+i].Text = text;
-            loadPresetToolStripMenuItem.DropDownItems[2+i].Visible = true;
-            
-            savePresetToolStripMenuItem.DropDownItems[2+i].Text = text;
-            savePresetToolStripMenuItem.DropDownItems[2+i].Visible = true;
-            
-            presetToolStripMenuItem.DropDownItems[13+i].Image = presetIcons[i];
-            presetToolStripMenuItem.DropDownItems[13+i].Text = text;
+            presetToolStripMenuItem.DropDownItems[11+i].Image = presetIcons[i];
+            presetToolStripMenuItem.DropDownItems[11+i].Text = text;
         }
         
         resetSpeedGraphToolStripMenuItem.Enabled = !im1bitPalette;
@@ -736,22 +715,6 @@ partial class PyroCraft:Form {
         
         burnFromBottomToTopToolStripMenuItem.Checked = gcBurnFromBottomToTop;
         doNotReturnYToolStripMenuItem.Checked = gcDontReturnY;
-    }
-    
-    private void LoadPresetToolStripMenuItemDropDownItemClicked(object sender, ToolStripItemClickedEventArgs e) {
-        int idx = (int)e.ClickedItem.Tag;
-        if (idx < 0) {
-            return;
-        }
-        LoadPreset(idx);
-    }
-    
-    private void SavePresetToolStripMenuItemDropDownItemClicked(object sender, ToolStripItemClickedEventArgs e) {
-        int idx = (int)e.ClickedItem.Tag;
-        if (idx < 0) {
-            return;
-        }
-        SavePreset(idx);
     }
     
     private void ResetSpeedGraphToolStripMenuItemDropDownItemClicked(object sender, ToolStripItemClickedEventArgs e) {
@@ -936,10 +899,6 @@ partial class PyroCraft:Form {
         this.flipYToolStripMenuItem.Text = resources.GetString("Menu_FlipY", culture);
         this.cropToolStripMenuItem.Text = resources.GetString("Menu_CropBorder", culture);
         this.presetToolStripMenuItem.Text = resources.GetString("Menu_Preset", culture);
-        this.loadPresetToolStripMenuItem.Text = resources.GetString("Menu_PresetLoad", culture);
-        this.fileToolStripMenuItem1.Text = resources.GetString("Menu_PresetFile", culture);
-        this.savePresetToolStripMenuItem.Text = resources.GetString("Menu_PresetSave", culture);
-        this.fileToolStripMenuItem2.Text = resources.GetString("Menu_PresetFile", culture);
         this.resetSpeedGraphToolStripMenuItem.Text = resources.GetString("Menu_SpeedGraphReset", culture);
         this.defaultToolStripMenuItem1.Text = resources.GetString("Menu_GraphLinear", culture);
         this.x4axisToolStripMenuItem.Text = resources.GetString("Menu_GraphDefault", culture);
