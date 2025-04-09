@@ -395,9 +395,6 @@
         AAAASUVORK5CYII=
 </value>
   </data>
-  <data name="GrblSet_HomingCycle2" xml:space="preserve">
-    <value>Homing Cycle &amp;2:</value>
-  </data>
   <data name="Gc_MmPerRevolution" xml:space="preserve">
     <value>MM per Revol&amp;ution:</value>
   </data>
@@ -422,72 +419,6 @@
   <data name="Error_InvalidImageFile" xml:space="preserve">
     <value>'{0}' does not have a valid image format!</value>
   </data>
-  <data name="GrblSet_Title" xml:space="preserve">
-    <value>Controller Settings</value>
-  </data>
-  <data name="GrblSet_XAxis" xml:space="preserve">
-    <value>X Axis</value>
-  </data>
-  <data name="GrblSet_YAxis" xml:space="preserve">
-    <value>Y Axis</value>
-  </data>
-  <data name="GrblSet_StepsPerMM" xml:space="preserve">
-    <value>S&amp;teps per MM:</value>
-  </data>
-  <data name="GrblSet_MaxVelocity" xml:space="preserve">
-    <value>Max &amp;Velocity:</value>
-  </data>
-  <data name="GrblSet_MaxAccel" xml:space="preserve">
-    <value>A&amp;cceleration:</value>
-  </data>
-  <data name="GrblSet_MaxTravel" xml:space="preserve">
-    <value>Ta&amp;ble Size:</value>
-  </data>
-  <data name="GrblSet_FastJog" xml:space="preserve">
-    <value>&amp;Fast Jog:</value>
-  </data>
-  <data name="GrblSet_SlowJog" xml:space="preserve">
-    <value>Slo&amp;w Jog:</value>
-  </data>
-  <data name="GrblSet_InvertStepPin" xml:space="preserve">
-    <value>Invert STEP Pin</value>
-  </data>
-  <data name="GrblSet_InvertDirectionPin" xml:space="preserve">
-    <value>Invert DIR Pin</value>
-  </data>
-  <data name="GrblSet_HomingDirInvert" xml:space="preserve">
-    <value>Invert Homing Direction</value>
-  </data>
-  <data name="GrblSet_FrameSpeed" xml:space="preserve">
-    <value>Fr&amp;ame Speed:</value>
-  </data>
-  <data name="GrblSet_FramePower" xml:space="preserve">
-    <value>Frame Pow&amp;er:</value>
-  </data>
-  <data name="GrblSet_InvertStEnablePin" xml:space="preserve">
-    <value>Invert Ste&amp;pper EN Pin</value>
-  </data>
-  <data name="GrblSet_InvertHomePin" xml:space="preserve">
-    <value>Invert HOME Pin</value>
-  </data>
-  <data name="GrblSet_CoreXY" xml:space="preserve">
-    <value>CoreXY/H-bot &amp;Kinematics</value>
-  </data>
-  <data name="GrblSet_HomingCycle1" xml:space="preserve">
-    <value>Homing Cycle &amp;1:</value>
-  </data>
-  <data name="GrblSet_HomingSeekRate" xml:space="preserve">
-    <value>Homing S&amp;eek Rate:</value>
-  </data>
-  <data name="GrblSet_MarkerPower" xml:space="preserve">
-    <value>&amp;Marker Power:</value>
-  </data>
-  <data name="GrblSet_FastGrid" xml:space="preserve">
-    <value>&amp;Fast Grid:</value>
-  </data>
-  <data name="GrblSet_SlowGrid" xml:space="preserve">
-    <value>Slo&amp;w Grid:</value>
-  </data>
   <data name="Btn_OK" xml:space="preserve">
     <value>OK</value>
   </data>
@@ -500,32 +431,11 @@
   <data name="PF_RetrievingGrblSettings" xml:space="preserve">
     <value>Retrieving controller settings...</value>
   </data>
-  <data name="Grbl_UnknownParameter" xml:space="preserve">
-    <value>Response from controller contains one or more unknown parameters. Try changing controller settings using the latest version of PyroCraft.</value>
-  </data>
   <data name="Grbl_GCodeError" xml:space="preserve">
     <value>Something went wrong. Controller responded with error code {0}.</value>
   </data>
   <data name="Grbl_GCodeErrorFile" xml:space="preserve">
     <value>G-code error in '{0}' near line {1}. Controller responded with error code {2}.</value>
-  </data>
-  <data name="GrblSet_InvertJogKeys" xml:space="preserve">
-    <value>Invert Jog Keys</value>
-  </data>
-  <data name="GrblSet_PWMFrequency" xml:space="preserve">
-    <value>PWM &amp;Frequency:</value>
-  </data>
-  <data name="GrblSet_InvertLaserENPin" xml:space="preserve">
-    <value>I&amp;nvert Laser EN Pin</value>
-  </data>
-  <data name="GrblSet_InvertLaserPWMPin" xml:space="preserve">
-    <value>Inve&amp;rt Laser PWM Pin</value>
-  </data>
-  <data name="GrblSet_PWMAlwaysOn" xml:space="preserve">
-    <value>PWM Always &amp;On</value>
-  </data>
-  <data name="GrblSet_DisableBuzzer" xml:space="preserve">
-    <value>Disable Bu&amp;zzer</value>
   </data>
   <data name="Menu_Rotate270" xml:space="preserve">
     <value>Rotate &amp;left 90°</value>
@@ -559,21 +469,6 @@
   </data>
   <data name="Grbl_GCodeLock" xml:space="preserve">
     <value>Controller is locked out during ALARM state.</value>
-  </data>
-  <data name="GrblSet_InvertEStopPin" xml:space="preserve">
-    <value>&amp;Invert E-Stop Pin</value>
-  </data>
-  <data name="GrblSet_ServoControl" xml:space="preserve">
-    <value>&amp;Servo Control</value>
-  </data>
-  <data name="GrblSet_HBridgeControl" xml:space="preserve">
-    <value>&amp;H-Bridge Control</value>
-  </data>
-  <data name="GrblSet_SwapJogKeys" xml:space="preserve">
-    <value>Swap &amp;Jog Keys</value>
-  </data>
-  <data name="GrblSet_PSUControl" xml:space="preserve">
-    <value>Enable PS&amp;U Control</value>
   </data>
   <data name="Menu_BurnFromBottomToTop" xml:space="preserve">
     <value>Burn from &amp;Bottom to Top</value>

@@ -402,42 +402,6 @@
   <data name="Error_CouldNotFindFile" xml:space="preserve">
     <value>Не удалось найти '{0}'!</value>
   </data>
-  <data name="GrblSet_Title" xml:space="preserve">
-    <value>Конфигурация контроллера</value>
-  </data>
-  <data name="GrblSet_XAxis" xml:space="preserve">
-    <value>Ось X</value>
-  </data>
-  <data name="GrblSet_YAxis" xml:space="preserve">
-    <value>Ось Y</value>
-  </data>
-  <data name="GrblSet_StepsPerMM" xml:space="preserve">
-    <value>Шагов на ММ:</value>
-  </data>
-  <data name="GrblSet_MaxVelocity" xml:space="preserve">
-    <value>Макс. скорость:</value>
-  </data>
-  <data name="GrblSet_MaxAccel" xml:space="preserve">
-    <value>Макс. ускорение:</value>
-  </data>
-  <data name="GrblSet_MaxTravel" xml:space="preserve">
-    <value>Размер стола:</value>
-  </data>
-  <data name="GrblSet_InvertStepPin" xml:space="preserve">
-    <value>Инверт. пин STEP</value>
-  </data>
-  <data name="GrblSet_InvertDirectionPin" xml:space="preserve">
-    <value>Инверт. пин DIR</value>
-  </data>
-  <data name="GrblSet_InvertHomePin" xml:space="preserve">
-    <value>Инверт. пин HOME</value>
-  </data>
-  <data name="GrblSet_CoreXY" xml:space="preserve">
-    <value>Кинематика CoreXY/H-бот</value>
-  </data>
-  <data name="GrblSet_MarkerPower" xml:space="preserve">
-    <value>Мощность маркера:</value>
-  </data>
   <data name="Btn_OK" xml:space="preserve">
     <value>OK</value>
   </data>
@@ -450,20 +414,11 @@
   <data name="PF_RetrievingGrblSettings" xml:space="preserve">
     <value>Получение настроек контроллера...</value>
   </data>
-  <data name="Grbl_UnknownParameter" xml:space="preserve">
-    <value>Ответ от контроллера содержит один или несколько неизвестных параметров. Попробуйте изменить настройки контроллера используя последнюю версию программы PyroCraft.</value>
-  </data>
   <data name="Grbl_GCodeError" xml:space="preserve">
     <value>Что-то пошло не так. Контроллер ответил кодом ошибки {0}.</value>
   </data>
   <data name="Grbl_GCodeErrorFile" xml:space="preserve">
     <value>Ошибка G-кода в файле '{0}' на строке {1}. Контроллер ответил кодом ошибки {2}.</value>
-  </data>
-  <data name="GrblSet_PWMFrequency" xml:space="preserve">
-    <value>Частота ШИМ:</value>
-  </data>
-  <data name="GrblSet_DisableBuzzer" xml:space="preserve">
-    <value>Отключить зуммер</value>
   </data>
   <data name="Gc_NumberOfPasses" xml:space="preserve">
     <value>Кол-во проходов:</value>

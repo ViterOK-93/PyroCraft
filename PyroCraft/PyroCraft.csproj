@@ -89,10 +89,6 @@
     <Compile Include="GCode.cs" />
     <Compile Include="GraphView.cs" />
     <Compile Include="GrblComm.cs" />
-    <Compile Include="GrblSettingsForm.cs" />
-    <Compile Include="GrblSettingsForm.Designer.cs">
-      <DependentUpon>GrblSettingsForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="I2GResources.cs" />
     <EmbeddedResource Include="I2GResources.resx">
       <DependentUpon>I2GResources.cs</DependentUpon>
@@ -124,7 +120,6 @@
     <Compile Include="MyExtensions.cs" />
     <Compile Include="Preset.cs" />
     <Compile Include="ProgressForm.cs" />
-    <Compile Include="ProgressForm2.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -402,51 +402,6 @@
   <data name="Error_InvalidImageFile" xml:space="preserve">
     <value>'{0}' no tiene un formato de imagen válido!</value>
   </data>
-  <data name="GrblSet_Title" xml:space="preserve">
-    <value>Configuración del controlador</value>
-  </data>
-  <data name="GrblSet_XAxis" xml:space="preserve">
-    <value>Eje X</value>
-  </data>
-  <data name="GrblSet_YAxis" xml:space="preserve">
-    <value>Eje Y</value>
-  </data>
-  <data name="GrblSet_StepsPerMM" xml:space="preserve">
-    <value>Pasos por MM:</value>
-  </data>
-  <data name="GrblSet_MaxVelocity" xml:space="preserve">
-    <value>Velocidad máxima:</value>
-  </data>
-  <data name="GrblSet_MaxAccel" xml:space="preserve">
-    <value>Aceleración:</value>
-  </data>
-  <data name="GrblSet_MaxTravel" xml:space="preserve">
-    <value>Tamaño de la mesa:</value>
-  </data>
-  <data name="GrblSet_FastJog" xml:space="preserve">
-    <value>Movimiento rápido:</value>
-  </data>
-  <data name="GrblSet_SlowJog" xml:space="preserve">
-    <value>Movimiento lento:</value>
-  </data>
-  <data name="GrblSet_InvertStepPin" xml:space="preserve">
-    <value>Invertir Pin STEP</value>
-  </data>
-  <data name="GrblSet_InvertDirectionPin" xml:space="preserve">
-    <value>Invertir Pin DIR</value>
-  </data>
-  <data name="GrblSet_HomingDirInvert" xml:space="preserve">
-    <value>Invertir dirección de inicio</value>
-  </data>
-  <data name="GrblSet_CoreXY" xml:space="preserve">
-    <value>CoreXY/H-bot Kinematics</value>
-  </data>
-  <data name="GrblSet_FastGrid" xml:space="preserve">
-    <value>Cuadrícula rápida:</value>
-  </data>
-  <data name="GrblSet_SlowGrid" xml:space="preserve">
-    <value>Cuadrícula lenta:</value>
-  </data>
   <data name="Btn_OK" xml:space="preserve">
     <value>OK</value>
   </data>
@@ -461,21 +416,6 @@
   </data>
   <data name="TranslationAuthor" xml:space="preserve">
     <value>Oslay Viera</value>
-  </data>
-  <data name="GrblSet_HomingCycle2" xml:space="preserve">
-    <value>Ciclo de inicio 2:</value>
-  </data>
-  <data name="GrblSet_InvertHomePin" xml:space="preserve">
-    <value>Invertir Pin HOME</value>
-  </data>
-  <data name="GrblSet_HomingCycle1" xml:space="preserve">
-    <value>Ciclo de inicio 1:</value>
-  </data>
-  <data name="GrblSet_MarkerPower" xml:space="preserve">
-    <value>Poder del marcador:</value>
-  </data>
-  <data name="Grbl_UnknownParameter" xml:space="preserve">
-    <value>La respuesta del controlador contiene uno o más parámetros desconocidos. Intente cambiar la configuración del controlador con la última versión de PyroCraft.</value>
   </data>
   <data name="Grbl_GCodeError" xml:space="preserve">
     <value>Algo salió mal. El controlador respondió con el código de error {0}.</value>

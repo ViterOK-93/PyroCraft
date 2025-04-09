@@ -426,16 +426,6 @@ partial class PyroCraft:Form {
             }
         };
         
-        progressForm3 = new ProgressForm2(resources.GetString("PF_RetrievingGrblSettings", culture));
-        progressForm3.Load += (sender2, e2) => {
-            ((Form)sender2).Left = (this.Left + (this.Width - ((Form)sender2).Width)/2);
-            ((Form)sender2).Top = (this.Top + (this.Height - ((Form)sender2).Height)/2);
-        };
-        
-        grblSettings1 = new GrblSettingsForm();
-        grblSettings1.button1.Click += GrblSettingsWrite;
-        grblSettings1.button3.Click += GrblSettingsWrite;
-        
         foreach (CultureInfo culture2 in CultureInfo.GetCultures(CultureTypes.NeutralCultures)) {
             if (!File.Exists(culture2.Name + "\\PyroCraft.resources.dll")) {
                 continue;
@@ -908,7 +898,6 @@ partial class PyroCraft:Form {
         this.doNotReturnYToolStripMenuItem.Text = resources.GetString("Menu_DoNotReturnY", culture);
         this.machineToolStripMenuItem.Text = resources.GetString("Menu_Machine", culture);
         this.sendToolStripMenuItem.Text = resources.GetString("Menu_Send", culture);
-        this.settingsToolStripMenuItem.Text = resources.GetString("Menu_Configuration", culture);
         this.uploadToolStripMenuItem.Text = resources.GetString("Menu_SendFile", culture);
         this.helpToolStripMenuItem.Text = resources.GetString("Menu_Help", culture);
         this.websiteToolStripMenuItem.Text = resources.GetString("Menu_Website", culture);
@@ -962,51 +951,6 @@ partial class PyroCraft:Form {
         progressForm1.SuspendLayout2();
         progressForm1.button1.Text = resources.GetString("PF_Abort", culture);
         progressForm1.ResumeLayout2();
-        
-        grblSettings1.SuspendLayout2();
-        grblSettings1.Text = resources.GetString("GrblSet_Title", culture);
-        grblSettings1.label1.Text = resources.GetString("GrblSet_XAxis", culture);
-        grblSettings1.label2.Text = resources.GetString("GrblSet_YAxis", culture);
-        grblSettings1.label4.Text = resources.GetString("GrblSet_StepsPerMM", culture);
-        grblSettings1.label5.Text = resources.GetString("GrblSet_MaxVelocity", culture);
-        grblSettings1.label6.Text = resources.GetString("GrblSet_MaxAccel", culture);
-        grblSettings1.label8.Text = resources.GetString("GrblSet_FastJog", culture);
-        grblSettings1.label9.Text = resources.GetString("GrblSet_SlowJog", culture);
-        grblSettings1.label7.Text = resources.GetString("GrblSet_MaxTravel", culture);
-        grblSettings1.checkBox1.Text = resources.GetString("GrblSet_InvertStepPin", culture);
-        grblSettings1.checkBox2.Text = resources.GetString("GrblSet_InvertStepPin", culture);
-        grblSettings1.checkBox4.Text = resources.GetString("GrblSet_InvertDirectionPin", culture);
-        grblSettings1.checkBox5.Text = resources.GetString("GrblSet_InvertDirectionPin", culture);
-        grblSettings1.checkBox3.Text = resources.GetString("GrblSet_InvertHomePin", culture);
-        grblSettings1.checkBox6.Text = resources.GetString("GrblSet_InvertHomePin", culture);
-        grblSettings1.checkBox14.Text = resources.GetString("GrblSet_InvertJogKeys", culture);
-        grblSettings1.checkBox15.Text = resources.GetString("GrblSet_InvertJogKeys", culture);
-        grblSettings1.checkBox7.Text = resources.GetString("GrblSet_HomingDirInvert", culture);
-        grblSettings1.checkBox8.Text = resources.GetString("GrblSet_HomingDirInvert", culture);
-        grblSettings1.label3.Text = resources.GetString("GrblSet_HomingCycle1", culture);
-        grblSettings1.label10.Text = resources.GetString("GrblSet_HomingCycle2", culture);
-        grblSettings1.label16.Text = resources.GetString("GrblSet_HomingSeekRate", culture);
-        grblSettings1.label19.Text = resources.GetString("GrblSet_FastGrid", culture);
-        grblSettings1.label20.Text = resources.GetString("GrblSet_SlowGrid", culture);
-        grblSettings1.label11.Text = resources.GetString("GrblSet_PWMFrequency", culture);
-        grblSettings1.label22.Text = resources.GetString("GrblSet_MarkerPower", culture);
-        grblSettings1.label12.Text = resources.GetString("GrblSet_FrameSpeed", culture);
-        grblSettings1.label13.Text = resources.GetString("GrblSet_FramePower", culture);
-        grblSettings1.checkBox12.Text = resources.GetString("GrblSet_InvertStEnablePin", culture);
-        grblSettings1.checkBox17.Text = resources.GetString("GrblSet_InvertLaserENPin", culture);
-        grblSettings1.checkBox20.Text = resources.GetString("GrblSet_InvertEStopPin", culture);
-        grblSettings1.checkBox18.Text = resources.GetString("GrblSet_InvertLaserPWMPin", culture);
-        grblSettings1.checkBox19.Text = resources.GetString("GrblSet_PWMAlwaysOn", culture);
-        grblSettings1.checkBox23.Text = resources.GetString("GrblSet_ServoControl", culture);
-        grblSettings1.checkBox16.Text = resources.GetString("GrblSet_CoreXY", culture);
-        grblSettings1.checkBox22.Text = resources.GetString("GrblSet_HBridgeControl", culture);
-        grblSettings1.checkBox25.Text = resources.GetString("GrblSet_SwapJogKeys", culture);
-        grblSettings1.checkBox24.Text = resources.GetString("GrblSet_PSUControl", culture);
-        grblSettings1.checkBox21.Text = resources.GetString("GrblSet_DisableBuzzer", culture);
-        grblSettings1.button1.Text = resources.GetString("Btn_OK", culture);
-        grblSettings1.button2.Text = resources.GetString("Btn_Cancel", culture);
-        grblSettings1.button3.Text = resources.GetString("Btn_Apply", culture);
-        grblSettings1.ResumeLayout2();
     }
     
     private void Control_ValueChanged(object sender, EventArgs e) {

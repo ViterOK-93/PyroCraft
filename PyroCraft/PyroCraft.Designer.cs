@@ -79,8 +79,6 @@ partial class PyroCraft {
         this.portToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         this.sendToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-        this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
         this.uploadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         this.websiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -710,8 +708,6 @@ partial class PyroCraft {
                         this.portToolStripMenuItem,
                         this.sendToolStripMenuItem,
                         this.toolStripSeparator3,
-                        this.settingsToolStripMenuItem,
-                        this.toolStripSeparator4,
                         this.uploadToolStripMenuItem});
         this.machineToolStripMenuItem.Text = "Mac&hine";
         this.machineToolStripMenuItem.DropDownOpening += new System.EventHandler(this.MachineToolStripMenuItemDropDownOpening);
@@ -729,12 +725,6 @@ partial class PyroCraft {
         this.sendToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
         this.sendToolStripMenuItem.Text = "S&end...";
         this.sendToolStripMenuItem.Click += new System.EventHandler(this.SendToolStripMenuItemClick);
-        // 
-        // settingsToolStripMenuItem
-        // 
-        this.settingsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("settingsToolStripMenuItem.Image")));
-        this.settingsToolStripMenuItem.Text = "&Configuration...";
-        this.settingsToolStripMenuItem.Click += new System.EventHandler(this.SettingsToolStripMenuItemClick);
         // 
         // uploadToolStripMenuItem
         // 
@@ -3054,8 +3044,6 @@ partial class PyroCraft {
     private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
     private System.Windows.Forms.ToolStripMenuItem uploadToolStripMenuItem;
-    private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-    private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
     private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
     private System.Windows.Forms.ToolStripMenuItem sendToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem portToolStripMenuItem;

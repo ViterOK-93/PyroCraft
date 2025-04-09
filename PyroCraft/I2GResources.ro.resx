@@ -402,51 +402,6 @@
   <data name="Error_InvalidImageFile" xml:space="preserve">
     <value>'{0}' nu are un format de imagine valid!</value>
   </data>
-  <data name="GrblSet_Title" xml:space="preserve">
-    <value>Setări Controler</value>
-  </data>
-  <data name="GrblSet_XAxis" xml:space="preserve">
-    <value>Axa X</value>
-  </data>
-  <data name="GrblSet_YAxis" xml:space="preserve">
-    <value>Axa Y</value>
-  </data>
-  <data name="GrblSet_StepsPerMM" xml:space="preserve">
-    <value>Pași pe MM:</value>
-  </data>
-  <data name="GrblSet_MaxVelocity" xml:space="preserve">
-    <value>Viteza maxima:</value>
-  </data>
-  <data name="GrblSet_MaxAccel" xml:space="preserve">
-    <value>Acceleratie:</value>
-  </data>
-  <data name="GrblSet_MaxTravel" xml:space="preserve">
-    <value>Dimensiunea mesei:</value>
-  </data>
-  <data name="GrblSet_FastJog" xml:space="preserve">
-    <value>Jog rapid:</value>
-  </data>
-  <data name="GrblSet_SlowJog" xml:space="preserve">
-    <value>Jog lent:</value>
-  </data>
-  <data name="GrblSet_InvertStepPin" xml:space="preserve">
-    <value>Invertare Pin STEP</value>
-  </data>
-  <data name="GrblSet_InvertDirectionPin" xml:space="preserve">
-    <value>Invertare Pin DIR</value>
-  </data>
-  <data name="GrblSet_HomingDirInvert" xml:space="preserve">
-    <value>Inversare DIR Homing</value>
-  </data>
-  <data name="GrblSet_CoreXY" xml:space="preserve">
-    <value>Cinematică CoreXY/H-bot</value>
-  </data>
-  <data name="GrblSet_FastGrid" xml:space="preserve">
-    <value>Grilă rapidă:</value>
-  </data>
-  <data name="GrblSet_SlowGrid" xml:space="preserve">
-    <value>Grilă lentă:</value>
-  </data>
   <data name="Btn_OK" xml:space="preserve">
     <value>OK</value>
   </data>
@@ -461,21 +416,6 @@
   </data>
   <data name="TranslationAuthor" xml:space="preserve">
     <value>Levente Foldes</value>
-  </data>
-  <data name="GrblSet_HomingCycle2" xml:space="preserve">
-    <value>Revenire Acasă 2:</value>
-  </data>
-  <data name="GrblSet_InvertHomePin" xml:space="preserve">
-    <value>Invertare Pin HOME</value>
-  </data>
-  <data name="GrblSet_HomingCycle1" xml:space="preserve">
-    <value>Revenire Acasă 1:</value>
-  </data>
-  <data name="GrblSet_MarkerPower" xml:space="preserve">
-    <value>Putere Marcare:</value>
-  </data>
-  <data name="Grbl_UnknownParameter" xml:space="preserve">
-    <value>Răspunsul de la controler conține unul sau mai mulți parametri necunoscuți. Încercați să schimbați setările controlerului folosind cea mai recentă versiune a PyroCraft.</value>
   </data>
   <data name="Grbl_GCodeError" xml:space="preserve">
     <value>Ceva n-a mers bine. Controlerul a răspuns cu codul de eroare {0}.</value>
