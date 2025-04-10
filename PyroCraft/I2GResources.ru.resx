@@ -159,9 +159,6 @@
   <data name="Gc_Bidirectional" xml:space="preserve">
     <value>В обе стороны</value>
   </data>
-  <data name="Menu_Machine" xml:space="preserve">
-    <value>Станок</value>
-  </data>
   <data name="Im_Resolution" xml:space="preserve">
     <value>Разрешение картинки (DPI):</value>
   </data>
@@ -195,9 +192,6 @@
   <data name="Im_SharpenForce" xml:space="preserve">
     <value>Усиление резкости:</value>
   </data>
-  <data name="Menu_Configuration" xml:space="preserve">
-    <value>Конфигурация...</value>
-  </data>
   <data name="Menu_Reload" xml:space="preserve">
     <value>Перечитать</value>
   </data>
@@ -206,9 +200,6 @@
   </data>
   <data name="Gc_Speed" xml:space="preserve">
     <value>Скорость:</value>
-  </data>
-  <data name="PF_SendingFile" xml:space="preserve">
-    <value>Отправка NC-файла...</value>
   </data>
   <data name="Grbl_InvalidResponse" xml:space="preserve">
     <value>Некорректный ответ от контроллера!</value>
@@ -276,9 +267,6 @@
   <data name="Menu_Close" xml:space="preserve">
     <value>Закрыть</value>
   </data>
-  <data name="Menu_SerialPort" xml:space="preserve">
-    <value>COM-порт ({0})</value>
-  </data>
   <data name="Btn_SaveGCode" xml:space="preserve">
     <value>Сохранить G-код...</value>
   </data>
@@ -293,9 +281,6 @@
   </data>
   <data name="Menu_Preset" xml:space="preserve">
     <value>Пресет</value>
-  </data>
-  <data name="Menu_SendFile" xml:space="preserve">
-    <value>Отправить NC-файл...</value>
   </data>
   <data name="Grbl_NotResponding" xml:space="preserve">
     <value>Контроллер не отвечает!</value>
@@ -411,14 +396,11 @@
   <data name="Btn_Apply" xml:space="preserve">
     <value>Применить</value>
   </data>
-  <data name="PF_RetrievingGrblSettings" xml:space="preserve">
-    <value>Получение настроек контроллера...</value>
+  <data name="Menu_NoPorts" xml:space="preserve">
+    <value>(Нету COM-портов)</value>
   </data>
   <data name="Grbl_GCodeError" xml:space="preserve">
     <value>Что-то пошло не так. Контроллер ответил кодом ошибки {0}.</value>
-  </data>
-  <data name="Grbl_GCodeErrorFile" xml:space="preserve">
-    <value>Ошибка G-кода в файле '{0}' на строке {1}. Контроллер ответил кодом ошибки {2}.</value>
   </data>
   <data name="Gc_NumberOfPasses" xml:space="preserve">
     <value>Кол-во проходов:</value>

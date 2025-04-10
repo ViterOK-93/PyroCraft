@@ -126,9 +126,6 @@
   <data name="PF_Abort" xml:space="preserve">
     <value>ABORTAR</value>
   </data>
-  <data name="PF_SendingFile" xml:space="preserve">
-    <value>Enviando archivo NC...</value>
-  </data>
   <data name="PF_SendingData" xml:space="preserve">
     <value>Enviando datos...</value>
   </data>
@@ -180,20 +177,8 @@
   <data name="Menu_MachineType" xml:space="preserve">
     <value>Tipo de máquina ({0})</value>
   </data>
-  <data name="Menu_Machine" xml:space="preserve">
-    <value>Máquina</value>
-  </data>
-  <data name="Menu_SerialPort" xml:space="preserve">
-    <value>Puerto serie ({0})</value>
-  </data>
   <data name="Menu_Send" xml:space="preserve">
     <value>Enviar...</value>
-  </data>
-  <data name="Menu_SendFile" xml:space="preserve">
-    <value>Enviar archivo-NC...</value>
-  </data>
-  <data name="Menu_Configuration" xml:space="preserve">
-    <value>Configuración...</value>
   </data>
   <data name="Menu_Help" xml:space="preserve">
     <value>Ayuda</value>
@@ -411,17 +396,11 @@
   <data name="Btn_Apply" xml:space="preserve">
     <value>Aplicar</value>
   </data>
-  <data name="PF_RetrievingGrblSettings" xml:space="preserve">
-    <value>Recuperando la configuración del controlador...</value>
-  </data>
   <data name="TranslationAuthor" xml:space="preserve">
     <value>Oslay Viera</value>
   </data>
   <data name="Grbl_GCodeError" xml:space="preserve">
     <value>Algo salió mal. El controlador respondió con el código de error {0}.</value>
-  </data>
-  <data name="Grbl_GCodeErrorFile" xml:space="preserve">
-    <value>Error de código G en '{0}' cerca de la línea {1}. El controlador respondió con el código de error {2}.</value>
   </data>
   <data name="Gc_NumberOfPasses" xml:space="preserve">
     <value>Número de pases:</value>
