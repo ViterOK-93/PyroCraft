@@ -558,6 +558,19 @@ partial class PyroCraft:Form {
         }
     }
     
+    private void FileToolStripMenuItemDropDownOpening(object sender, EventArgs e) {
+        SendToolStripMenuItemDropDownOpening(sendToolStripMenuItem, null);
+        
+        int lcid = culture.LCID;
+        foreach (ToolStripMenuItem toolStripItem in languageToolStripMenuItem.DropDownItems) {
+            toolStripItem.Checked = ((int)toolStripItem.Tag == lcid);
+        }
+    }
+    
+    private void FileToolStripMenuItemDropDownClosed(object sender, EventArgs e) {
+        sendToolStripMenuItem.DropDownItems.Clear();
+    }
+    
     private void OpenToolStripMenuItemClick(object sender, EventArgs e) {
         string prevFileName = openFileDialog1.FileName;
         if (openFileDialog1.ShowDialog(this) != DialogResult.OK) {
@@ -577,35 +590,62 @@ partial class PyroCraft:Form {
         LoadImage(openFileDialog1.FileName);
     }
     
-    private void ClipboardToolStripMenuItemClick(object sender, EventArgs e) {
-        IDataObject clipboardDataObject = Clipboard.GetDataObject();
-        if (clipboardDataObject == null) {
+    private void ExportToolStripMenuItemClick(object sender, EventArgs e) {
+        if (bWorkerIsBusy) {
             return;
         }
         
-        Bitmap image = (Bitmap)clipboardDataObject.GetData(DataFormats.Bitmap, true);
-        if (image == null) {
+        if (saveFileDialog1.ShowDialog(this) != DialogResult.OK) {
             return;
         }
         
-        LoadImage(null, image);
+        progressForm1.label1.Text = resources.GetString("PF_GeneratingGCode", culture);
+        progressForm1.progressBar1.Value = 0;
         
-        openFileDialog1.FileName = null;
-        saveFileDialog1.FileName = "*.nc";
-        saveFileDialog2.FileName = "*.bmp";
+        bWorker2SendToDevice = false;
+        
+        progressForm1.ShowDialog(this);
     }
     
-    private void FileToolStripMenuItemDropDownOpening(object sender, EventArgs e) {
-        SendToolStripMenuItemDropDownOpening(sendToolStripMenuItem, null);
+    private void SendToolStripMenuItemDropDownOpening(object sender, EventArgs e) {
+        string[] portNames = SerialPort.GetPortNames();
         
-        int lcid = culture.LCID;
-        foreach (ToolStripMenuItem toolStripItem in languageToolStripMenuItem.DropDownItems) {
-            toolStripItem.Checked = ((int)toolStripItem.Tag == lcid);
+        ((ToolStripDropDownItem)sender).DropDownItems.Clear();
+        if (portNames.Length > 0) {
+            foreach (string portName in portNames) {
+                ToolStripMenuItem toolStripItem = new ToolStripMenuItem();
+                toolStripItem.DisplayStyle = ToolStripItemDisplayStyle.Text;
+                toolStripItem.Text = portName;
+                toolStripItem.Checked = (portName == comPort);
+                
+                ((ToolStripDropDownItem)sender).DropDownItems.Add(toolStripItem);
+            }
+        } else {
+            ToolStripMenuItem toolStripItem = new ToolStripMenuItem();
+            toolStripItem.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripItem.Text = resources.GetString("Menu_NoPorts", culture);
+            toolStripItem.Enabled = false;
+            
+            ((ToolStripDropDownItem)sender).DropDownItems.Add(toolStripItem);
         }
     }
     
-    private void FileToolStripMenuItemDropDownClosed(object sender, EventArgs e) {
-        sendToolStripMenuItem.DropDownItems.Clear();
+    private void SendToolStripMenuItemDropDownItemClicked(object sender, ToolStripItemClickedEventArgs e) {
+        comPort = e.ClickedItem.Text;
+        SendToolStripMenuItemClick(sender, null);
+    }
+    
+    private void SendToolStripMenuItemClick(object sender, EventArgs e) {
+        if (bWorkerIsBusy) {
+            return;
+        }
+        
+        progressForm1.label1.Text = resources.GetString("PF_Initializing", culture);
+        progressForm1.progressBar1.Value = 0;
+        
+        bWorker2SendToDevice = true;
+        
+        progressForm1.ShowDialog(this);
     }
     
     private void LanguageToolStripMenuItemDropDownItemClicked(object sender, ToolStripItemClickedEventArgs e) {
@@ -633,6 +673,24 @@ partial class PyroCraft:Form {
     
     private void ImageToolStripMenuItemDropDownClosed(object sender, EventArgs e) {
         clipboardToolStripMenuItem.Enabled = true;
+    }
+    
+    private void ClipboardToolStripMenuItemClick(object sender, EventArgs e) {
+        IDataObject clipboardDataObject = Clipboard.GetDataObject();
+        if (clipboardDataObject == null) {
+            return;
+        }
+        
+        Bitmap image = (Bitmap)clipboardDataObject.GetData(DataFormats.Bitmap, true);
+        if (image == null) {
+            return;
+        }
+        
+        LoadImage(null, image);
+        
+        openFileDialog1.FileName = null;
+        saveFileDialog1.FileName = "*.nc";
+        saveFileDialog2.FileName = "*.bmp";
     }
     
     private void SaveToolStripMenuItemClick(object sender, EventArgs e) {
@@ -781,64 +839,6 @@ partial class PyroCraft:Form {
     
     private void DoNotReturnYToolStripMenuItemClick(object sender, EventArgs e) {
         gcDontReturnY = !gcDontReturnY;
-    }
-    
-    private void SendToolStripMenuItemDropDownOpening(object sender, EventArgs e) {
-        string[] portNames = SerialPort.GetPortNames();
-        
-        ((ToolStripDropDownItem)sender).DropDownItems.Clear();
-        if (portNames.Length > 0) {
-            foreach (string portName in portNames) {
-                ToolStripMenuItem toolStripItem = new ToolStripMenuItem();
-                toolStripItem.DisplayStyle = ToolStripItemDisplayStyle.Text;
-                toolStripItem.Text = portName;
-                toolStripItem.Checked = (portName == comPort);
-                
-                ((ToolStripDropDownItem)sender).DropDownItems.Add(toolStripItem);
-            }
-        } else {
-            ToolStripMenuItem toolStripItem = new ToolStripMenuItem();
-            toolStripItem.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripItem.Text = resources.GetString("Menu_NoPorts", culture);
-            toolStripItem.Enabled = false;
-            
-            ((ToolStripDropDownItem)sender).DropDownItems.Add(toolStripItem);
-        }
-    }
-    
-    private void SendToolStripMenuItemDropDownItemClicked(object sender, ToolStripItemClickedEventArgs e) {
-        comPort = e.ClickedItem.Text;
-        SendToolStripMenuItemClick(sender, null);
-    }
-    
-    private void ExportToolStripMenuItemClick(object sender, EventArgs e) {
-        if (bWorkerIsBusy) {
-            return;
-        }
-        
-        if (saveFileDialog1.ShowDialog(this) != DialogResult.OK) {
-            return;
-        }
-        
-        progressForm1.label1.Text = resources.GetString("PF_GeneratingGCode", culture);
-        progressForm1.progressBar1.Value = 0;
-        
-        bWorker2SendToDevice = false;
-        
-        progressForm1.ShowDialog(this);
-    }
-    
-    private void SendToolStripMenuItemClick(object sender, EventArgs e) {
-        if (bWorkerIsBusy) {
-            return;
-        }
-        
-        progressForm1.label1.Text = resources.GetString("PF_Initializing", culture);
-        progressForm1.progressBar1.Value = 0;
-        
-        bWorker2SendToDevice = true;
-        
-        progressForm1.ShowDialog(this);
     }
     
     private void UrlToolStripMenuItemClick(object sender, EventArgs e) {
