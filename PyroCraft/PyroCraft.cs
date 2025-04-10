@@ -95,7 +95,6 @@ partial class PyroCraft:Form {
     private int activePreset;
     
     private bool bWorker2SendToDevice;
-    private bool bWorker2ReadFromFile;
     
     private bool bWorkerIsBusy = true;
     
@@ -133,7 +132,6 @@ partial class PyroCraft:Form {
         InitializeComponent();
         
         openFileDialog1.Title = AppTitle;
-        openFileDialog2.Title = AppTitle;
         saveFileDialog1.Title = AppTitle;
         saveFileDialog2.Title = AppTitle;
         
@@ -598,10 +596,16 @@ partial class PyroCraft:Form {
     }
     
     private void FileToolStripMenuItemDropDownOpening(object sender, EventArgs e) {
+        SendToolStripMenuItemDropDownOpening(sendToolStripMenuItem, null);
+        
         int lcid = culture.LCID;
         foreach (ToolStripMenuItem toolStripItem in languageToolStripMenuItem.DropDownItems) {
             toolStripItem.Checked = ((int)toolStripItem.Tag == lcid);
         }
+    }
+    
+    private void FileToolStripMenuItemDropDownClosed(object sender, EventArgs e) {
+        sendToolStripMenuItem.DropDownItems.Clear();
     }
     
     private void LanguageToolStripMenuItemDropDownItemClicked(object sender, ToolStripItemClickedEventArgs e) {
@@ -779,30 +783,32 @@ partial class PyroCraft:Form {
         gcDontReturnY = !gcDontReturnY;
     }
     
-    private void MachineToolStripMenuItemDropDownOpening(object sender, EventArgs e) {
+    private void SendToolStripMenuItemDropDownOpening(object sender, EventArgs e) {
         string[] portNames = SerialPort.GetPortNames();
         
-        portToolStripMenuItem.Text = String.Format(culture, resources.GetString("Menu_SerialPort", culture), comPort);
+        ((ToolStripDropDownItem)sender).DropDownItems.Clear();
         if (portNames.Length > 0) {
-            portToolStripMenuItem.Enabled = true;
+            foreach (string portName in portNames) {
+                ToolStripMenuItem toolStripItem = new ToolStripMenuItem();
+                toolStripItem.DisplayStyle = ToolStripItemDisplayStyle.Text;
+                toolStripItem.Text = portName;
+                toolStripItem.Checked = (portName == comPort);
+                
+                ((ToolStripDropDownItem)sender).DropDownItems.Add(toolStripItem);
+            }
         } else {
-            portToolStripMenuItem.Enabled = false;
-            portNames = new string[] { "COM1", };
-        }
-        
-        portToolStripMenuItem.DropDownItems.Clear();
-        foreach (string portName in portNames) {
             ToolStripMenuItem toolStripItem = new ToolStripMenuItem();
             toolStripItem.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripItem.Text = portName;
-            toolStripItem.Checked = (portName == comPort);
+            toolStripItem.Text = resources.GetString("Menu_NoPorts", culture);
+            toolStripItem.Enabled = false;
             
-            portToolStripMenuItem.DropDownItems.Add(toolStripItem);
+            ((ToolStripDropDownItem)sender).DropDownItems.Add(toolStripItem);
         }
     }
     
-    private void PortToolStripMenuItemDropDownItemClicked(object sender, ToolStripItemClickedEventArgs e) {
+    private void SendToolStripMenuItemDropDownItemClicked(object sender, ToolStripItemClickedEventArgs e) {
         comPort = e.ClickedItem.Text;
+        SendToolStripMenuItemClick(sender, null);
     }
     
     private void ExportToolStripMenuItemClick(object sender, EventArgs e) {
@@ -818,7 +824,6 @@ partial class PyroCraft:Form {
         progressForm1.progressBar1.Value = 0;
         
         bWorker2SendToDevice = false;
-        bWorker2ReadFromFile = false;
         
         progressForm1.ShowDialog(this);
     }
@@ -832,22 +837,6 @@ partial class PyroCraft:Form {
         progressForm1.progressBar1.Value = 0;
         
         bWorker2SendToDevice = true;
-        bWorker2ReadFromFile = false;
-        
-        progressForm1.ShowDialog(this);
-    }
-    
-    private void UploadToolStripMenuItemClick(object sender, EventArgs e) {
-        openFileDialog2.FileName = null;
-        if (openFileDialog2.ShowDialog(this) != DialogResult.OK) {
-            return;
-        }
-        
-        progressForm1.label1.Text = resources.GetString("PF_Initializing", culture);
-        progressForm1.progressBar1.Value = 0;
-        
-        bWorker2SendToDevice = true;
-        bWorker2ReadFromFile = true;
         
         progressForm1.ShowDialog(this);
     }
@@ -896,9 +885,7 @@ partial class PyroCraft:Form {
         this.defaultToolStripMenuItem2.Text = resources.GetString("Menu_GraphLinear", culture);
         this.burnFromBottomToTopToolStripMenuItem.Text = resources.GetString("Menu_BurnFromBottomToTop", culture);
         this.doNotReturnYToolStripMenuItem.Text = resources.GetString("Menu_DoNotReturnY", culture);
-        this.machineToolStripMenuItem.Text = resources.GetString("Menu_Machine", culture);
         this.sendToolStripMenuItem.Text = resources.GetString("Menu_Send", culture);
-        this.uploadToolStripMenuItem.Text = resources.GetString("Menu_SendFile", culture);
         this.helpToolStripMenuItem.Text = resources.GetString("Menu_Help", culture);
         this.websiteToolStripMenuItem.Text = resources.GetString("Menu_Website", culture);
         this.CH341SERToolStripMenuItem.Text = resources.GetString("Menu_DownloadCH340Driver", culture);

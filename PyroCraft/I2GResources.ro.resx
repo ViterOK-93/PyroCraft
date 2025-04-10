@@ -126,9 +126,6 @@
   <data name="PF_Abort" xml:space="preserve">
     <value>ÎNTRERUPE</value>
   </data>
-  <data name="PF_SendingFile" xml:space="preserve">
-    <value>Trimitere fișier NC...</value>
-  </data>
   <data name="PF_SendingData" xml:space="preserve">
     <value>Trimiterea datelor...</value>
   </data>
@@ -180,20 +177,8 @@
   <data name="Menu_MachineType" xml:space="preserve">
     <value>Tipul mașinii ({0})</value>
   </data>
-  <data name="Menu_Machine" xml:space="preserve">
-    <value>Mașina</value>
-  </data>
-  <data name="Menu_SerialPort" xml:space="preserve">
-    <value>Potrul serial ({0})</value>
-  </data>
   <data name="Menu_Send" xml:space="preserve">
     <value>Trimite...</value>
-  </data>
-  <data name="Menu_SendFile" xml:space="preserve">
-    <value>Trimitere fișier NC...</value>
-  </data>
-  <data name="Menu_Configuration" xml:space="preserve">
-    <value>Configuraţie...</value>
   </data>
   <data name="Menu_Help" xml:space="preserve">
     <value>Ajutor</value>
@@ -411,17 +396,11 @@
   <data name="Btn_Apply" xml:space="preserve">
     <value>Aplică</value>
   </data>
-  <data name="PF_RetrievingGrblSettings" xml:space="preserve">
-    <value>Se preiau setările controlerului...</value>
-  </data>
   <data name="TranslationAuthor" xml:space="preserve">
     <value>Levente Foldes</value>
   </data>
   <data name="Grbl_GCodeError" xml:space="preserve">
     <value>Ceva n-a mers bine. Controlerul a răspuns cu codul de eroare {0}.</value>
-  </data>
-  <data name="Grbl_GCodeErrorFile" xml:space="preserve">
-    <value>Eroare de cod G în '{0}' lângă linia {1}. Controlerul a răspuns cu codul de eroare {2}.</value>
   </data>
   <data name="Gc_NumberOfPasses" xml:space="preserve">
     <value>Numărul de repetare:</value>

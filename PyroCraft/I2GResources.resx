@@ -126,9 +126,6 @@
   <data name="PF_Abort" xml:space="preserve">
     <value>&amp;ABORT</value>
   </data>
-  <data name="PF_SendingFile" xml:space="preserve">
-    <value>Sending NC-file...</value>
-  </data>
   <data name="PF_SendingData" xml:space="preserve">
     <value>Sending data...</value>
   </data>
@@ -180,20 +177,8 @@
   <data name="Menu_MachineType" xml:space="preserve">
     <value>&amp;Machine Type ({0})</value>
   </data>
-  <data name="Menu_Machine" xml:space="preserve">
-    <value>Mac&amp;hine</value>
-  </data>
-  <data name="Menu_SerialPort" xml:space="preserve">
-    <value>Serial &amp;Port ({0})</value>
-  </data>
   <data name="Menu_Send" xml:space="preserve">
     <value>S&amp;end...</value>
-  </data>
-  <data name="Menu_SendFile" xml:space="preserve">
-    <value>Send NC-&amp;file...</value>
-  </data>
-  <data name="Menu_Configuration" xml:space="preserve">
-    <value>&amp;Configuration...</value>
   </data>
   <data name="Menu_Help" xml:space="preserve">
     <value>H&amp;elp</value>
@@ -428,14 +413,8 @@
   <data name="Btn_Apply" xml:space="preserve">
     <value>Apply</value>
   </data>
-  <data name="PF_RetrievingGrblSettings" xml:space="preserve">
-    <value>Retrieving controller settings...</value>
-  </data>
   <data name="Grbl_GCodeError" xml:space="preserve">
     <value>Something went wrong. Controller responded with error code {0}.</value>
-  </data>
-  <data name="Grbl_GCodeErrorFile" xml:space="preserve">
-    <value>G-code error in '{0}' near line {1}. Controller responded with error code {2}.</value>
   </data>
   <data name="Menu_Rotate270" xml:space="preserve">
     <value>Rotate &amp;left 90°</value>
@@ -475,5 +454,8 @@
   </data>
   <data name="Menu_NichromeOnOffCommand" xml:space="preserve">
     <value>Nichrome O&amp;n/Off command ({0})</value>
+  </data>
+  <data name="Menu_NoPorts" xml:space="preserve">
+    <value>(No COM-ports)</value>
   </data>
 </root>

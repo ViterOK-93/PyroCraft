@@ -126,9 +126,6 @@
   <data name="PF_Abort" xml:space="preserve">
     <value>MEGSZAKÍT</value>
   </data>
-  <data name="PF_SendingFile" xml:space="preserve">
-    <value>NC-file küldés...</value>
-  </data>
   <data name="PF_SendingData" xml:space="preserve">
     <value>Adat küldés...</value>
   </data>
@@ -180,20 +177,8 @@
   <data name="Menu_MachineType" xml:space="preserve">
     <value>Gép típus ({0})</value>
   </data>
-  <data name="Menu_Machine" xml:space="preserve">
-    <value>Gép</value>
-  </data>
-  <data name="Menu_SerialPort" xml:space="preserve">
-    <value>Soros Port ({0})</value>
-  </data>
   <data name="Menu_Send" xml:space="preserve">
     <value>Küld...</value>
-  </data>
-  <data name="Menu_SendFile" xml:space="preserve">
-    <value>NC-fájl küldés...</value>
-  </data>
-  <data name="Menu_Configuration" xml:space="preserve">
-    <value>Konfiguráció...</value>
   </data>
   <data name="Menu_Help" xml:space="preserve">
     <value>Segítség</value>
@@ -411,17 +396,11 @@
   <data name="Btn_Apply" xml:space="preserve">
     <value>Alkalmaz</value>
   </data>
-  <data name="PF_RetrievingGrblSettings" xml:space="preserve">
-    <value>Vezérlő beállítások lekérése...</value>
-  </data>
   <data name="TranslationAuthor" xml:space="preserve">
     <value>Levente Foldes</value>
   </data>
   <data name="Grbl_GCodeError" xml:space="preserve">
     <value>Valami elromlott. A vezérlő a következő hibakóddal válaszolt {0}.</value>
-  </data>
-  <data name="Grbl_GCodeErrorFile" xml:space="preserve">
-    <value>G-kód hiba a következőben '{0}' a {1} sor közelében. A vezérlő a következő hibakóddal válaszolt {2}.</value>
   </data>
   <data name="Gc_NumberOfPasses" xml:space="preserve">
     <value>Menetek száma:</value>

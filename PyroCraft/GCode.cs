@@ -91,7 +91,6 @@ partial class PyroCraft {
     
     private unsafe void BackgroundWorker2DoWork(object sender, DoWorkEventArgs e) {
         bool sendToDevice = bWorker2SendToDevice;
-        bool readFromFile = bWorker2ReadFromFile;
         
         int width = imWidth;
         int height = imHeight;
@@ -103,43 +102,41 @@ partial class PyroCraft {
         int width2 = 0;
         int height2 = 0;
         
-        if (!sendToDevice || !readFromFile) {
-            for (int y = 0; y < height; y++) {
-                byte* dest = (byte*)(imDest + y*scanWidth);
-                for (int x = 0; x < width; x++) {
-                    if (dest[x] == ImColorUltraWhite) {
+        for (int y = 0; y < height; y++) {
+            byte* dest = (byte*)(imDest + y*scanWidth);
+            for (int x = 0; x < width; x++) {
+                if (dest[x] == ImColorUltraWhite) {
+                    continue;
+                }
+                
+                if (top2 == -1) {
+                    top2 = y;
+                }
+                if (left2 > x) {
+                    left2 = x;
+                }
+                
+                for (x = width; x > 0; x--) {
+                    if (dest[x-1] == ImColorUltraWhite) {
                         continue;
                     }
-                    
-                    if (top2 == -1) {
-                        top2 = y;
+                    if (width2 < x) {
+                        width2 = x;
                     }
-                    if (left2 > x) {
-                        left2 = x;
-                    }
-                    
-                    for (x = width; x > 0; x--) {
-                        if (dest[x-1] == ImColorUltraWhite) {
-                            continue;
-                        }
-                        if (width2 < x) {
-                            width2 = x;
-                        }
-                        break;
-                    }
-                    height2 = y;
-                    
                     break;
                 }
+                height2 = y;
+                
+                break;
             }
-            
-            if (top2 == -1) {
-                throw new WarningException(resources.GetString("Error_BlankImage", culture));
-            }
-            
-            width2 -= left2;
-            height2 -= (top2-1);
         }
+        
+        if (top2 == -1) {
+            throw new WarningException(resources.GetString("Error_BlankImage", culture));
+        }
+        
+        width2 -= left2;
+        height2 -= (top2-1);
         
         StreamWriter outFile;
         if (sendToDevice) {
@@ -242,9 +239,6 @@ partial class PyroCraft {
                                 string[] resp = serialPort1.ReadTo("\r\n").Split(new string[] { ":", }, 2, StringSplitOptions.None);
                                 if (resp[0] != "ok") {
                                     if (resp[0] == "error") {
-                                        if (readFromFile) {
-                                            throw new Exception(String.Format(culture, resources.GetString("Grbl_GCodeErrorFile", culture), Path.GetFileName(openFileDialog2.FileName), line_counter, resp[1]));
-                                        }
                                         throw new Exception(String.Format(culture, resources.GetString("Grbl_GCodeError", culture), resp[1]));
                                     }
                                     if (resp[0] == "ALARM") {
@@ -278,40 +272,6 @@ partial class PyroCraft {
                         serialPort1.Write(s_list[j-i] + "\n");
                     }
                 };
-                
-                if (readFromFile) {
-                    StreamReader inFile = new StreamReader(openFileDialog2.FileName, Encoding.ASCII, false);
-                    Stream baseStream = inFile.BaseStream;
-                    
-                    ((BackgroundWorker)sender).ReportProgress(0, resources.GetString("PF_SendingFile", culture));
-                    try {
-                        long streamLength = baseStream.Length;
-                        if (streamLength != 0) {
-                            for (;; i = 1) {
-                                ((BackgroundWorker)sender).ReportProgress((int)(1000 * baseStream.Position / streamLength), null);
-                                
-                                s_list[0] = inFile.ReadLine();
-                                if (s_list[0] == null) {
-                                    break;
-                                }
-                                
-                                if (!SendToGrblController()) {
-                                    return;
-                                }
-                            }
-                        }
-                    } finally {
-                        inFile.Close();
-                    }
-                    
-                    s_list[0] = "M2";
-                    if (!SendToGrblController()) {
-                        return;
-                    }
-                    
-                    SendToGrblController();
-                    return;
-                }
                 
                 ((BackgroundWorker)sender).ReportProgress(0, resources.GetString("PF_SendingData", culture));
             } else {
