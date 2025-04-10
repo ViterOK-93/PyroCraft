@@ -95,7 +95,6 @@ partial class PyroCraft:Form {
     private int activePreset;
     
     private bool bWorker2SendToDevice;
-    private bool bWorker2ReadFromFile;
     
     private bool bWorkerIsBusy = true;
     
@@ -133,7 +132,6 @@ partial class PyroCraft:Form {
         InitializeComponent();
         
         openFileDialog1.Title = AppTitle;
-        openFileDialog2.Title = AppTitle;
         saveFileDialog1.Title = AppTitle;
         saveFileDialog2.Title = AppTitle;
         
@@ -818,7 +816,6 @@ partial class PyroCraft:Form {
         progressForm1.progressBar1.Value = 0;
         
         bWorker2SendToDevice = false;
-        bWorker2ReadFromFile = false;
         
         progressForm1.ShowDialog(this);
     }
@@ -832,22 +829,6 @@ partial class PyroCraft:Form {
         progressForm1.progressBar1.Value = 0;
         
         bWorker2SendToDevice = true;
-        bWorker2ReadFromFile = false;
-        
-        progressForm1.ShowDialog(this);
-    }
-    
-    private void UploadToolStripMenuItemClick(object sender, EventArgs e) {
-        openFileDialog2.FileName = null;
-        if (openFileDialog2.ShowDialog(this) != DialogResult.OK) {
-            return;
-        }
-        
-        progressForm1.label1.Text = resources.GetString("PF_Initializing", culture);
-        progressForm1.progressBar1.Value = 0;
-        
-        bWorker2SendToDevice = true;
-        bWorker2ReadFromFile = true;
         
         progressForm1.ShowDialog(this);
     }
@@ -898,7 +879,6 @@ partial class PyroCraft:Form {
         this.doNotReturnYToolStripMenuItem.Text = resources.GetString("Menu_DoNotReturnY", culture);
         this.machineToolStripMenuItem.Text = resources.GetString("Menu_Machine", culture);
         this.sendToolStripMenuItem.Text = resources.GetString("Menu_Send", culture);
-        this.uploadToolStripMenuItem.Text = resources.GetString("Menu_SendFile", culture);
         this.helpToolStripMenuItem.Text = resources.GetString("Menu_Help", culture);
         this.websiteToolStripMenuItem.Text = resources.GetString("Menu_Website", culture);
         this.CH341SERToolStripMenuItem.Text = resources.GetString("Menu_DownloadCH340Driver", culture);

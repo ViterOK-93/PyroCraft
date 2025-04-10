@@ -79,7 +79,6 @@ partial class PyroCraft {
         this.portToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         this.sendToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-        this.uploadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         this.websiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
@@ -237,7 +236,6 @@ partial class PyroCraft {
         this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
         this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
         this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-        this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
         this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
         this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
         this.menuStrip1.SuspendLayout();
@@ -307,6 +305,8 @@ partial class PyroCraft {
                         this.exportToolStripMenuItem,
                         this.closeToolStripMenuItem,
                         this.toolStripSeparator1,
+                        this.sendToolStripMenuItem,
+                        this.toolStripSeparator3,
                         this.languageToolStripMenuItem,
                         this.toolStripSeparator6,
                         this.exitToolStripMenuItem});
@@ -699,10 +699,7 @@ partial class PyroCraft {
         // 
         this.machineToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
         this.machineToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-                        this.portToolStripMenuItem,
-                        this.sendToolStripMenuItem,
-                        this.toolStripSeparator3,
-                        this.uploadToolStripMenuItem});
+                        this.portToolStripMenuItem});
         this.machineToolStripMenuItem.Text = "Mac&hine";
         this.machineToolStripMenuItem.DropDownOpening += new System.EventHandler(this.MachineToolStripMenuItemDropDownOpening);
         // 
@@ -719,13 +716,6 @@ partial class PyroCraft {
         this.sendToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
         this.sendToolStripMenuItem.Text = "S&end...";
         this.sendToolStripMenuItem.Click += new System.EventHandler(this.SendToolStripMenuItemClick);
-        // 
-        // uploadToolStripMenuItem
-        // 
-        this.uploadToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("uploadToolStripMenuItem.Image")));
-        this.uploadToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.O)));
-        this.uploadToolStripMenuItem.Text = "Send NC-&file...";
-        this.uploadToolStripMenuItem.Click += new System.EventHandler(this.UploadToolStripMenuItemClick);
         // 
         // helpToolStripMenuItem
         // 
@@ -2612,11 +2602,6 @@ partial class PyroCraft {
         this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BackgroundWorker1ProgressChanged);
         this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BackgroundWorker1RunWorkerCompleted);
         // 
-        // openFileDialog2
-        // 
-        this.openFileDialog2.DefaultExt = "nc";
-        this.openFileDialog2.Filter = "All files (*.*)|*.*";
-        // 
         // backgroundWorker2
         // 
         this.backgroundWorker2.WorkerReportsProgress = true;
@@ -2803,7 +2788,6 @@ partial class PyroCraft {
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel33;
     private System.Windows.Forms.Label button29;
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel32;
-    private System.Windows.Forms.OpenFileDialog openFileDialog2;
     private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
     private System.Windows.Forms.Button button22;
     private System.Windows.Forms.Button button21;
@@ -2935,7 +2919,6 @@ partial class PyroCraft {
     private System.Windows.Forms.ToolStripMenuItem websiteToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-    private System.Windows.Forms.ToolStripMenuItem uploadToolStripMenuItem;
     private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
     private System.Windows.Forms.ToolStripMenuItem sendToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem portToolStripMenuItem;
