@@ -476,4 +476,7 @@
   <data name="Menu_NichromeOnOffCommand" xml:space="preserve">
     <value>Nichrome O&amp;n/Off command ({0})</value>
   </data>
+  <data name="Menu_NoPorts" xml:space="preserve">
+    <value>(No COM-ports)</value>
+  </data>
 </root>
